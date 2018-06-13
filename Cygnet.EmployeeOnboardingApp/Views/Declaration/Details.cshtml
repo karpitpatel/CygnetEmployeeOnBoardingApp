@@ -1,0 +1,82 @@
+﻿@model Cygnet.EmployeeOnboardingApp.Data.Model.Declaration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Declaration</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Kyc_Details)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Kyc_Details)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Is_Mem_Epf_Schema)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Is_Mem_Epf_Schema)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Dt_Allot_Ins_No)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Dt_Allot_Ins_No)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Dt_Issue_Tic)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Dt_Issue_Tic)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Created)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Created)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Modified)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Modified)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RowVersion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RowVersion)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

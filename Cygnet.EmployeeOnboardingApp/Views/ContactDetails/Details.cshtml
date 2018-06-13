@@ -1,0 +1,87 @@
+﻿@model Cygnet.EmployeeOnboardingApp.Data.Model.ContactDetails
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ContactDetails</h4>
+       @Html.ActionLink("Create New", "Create")
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HomeNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HomeNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MobNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MobNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TempAddr)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TempAddr)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PermAddr)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PermAddr)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Pincode_tempaddr)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Pincode_tempaddr)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Pincode_permadrr)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Pincode_permadrr)
+            </dd>
+
+            
+            
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        @Html.ActionLink("Back to List", "Index")
+       
+    </p>
+</body>
+</html>

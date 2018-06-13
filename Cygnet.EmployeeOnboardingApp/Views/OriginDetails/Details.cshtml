@@ -1,0 +1,66 @@
+﻿@model Cygnet.EmployeeOnboardingApp.Data.Model.OriginDetails
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>OriginDetails</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Is_International_Worker)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Is_International_Worker)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Country_Origin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Country_Origin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Created)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Created)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Modified)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Modified)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RowVersion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RowVersion)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

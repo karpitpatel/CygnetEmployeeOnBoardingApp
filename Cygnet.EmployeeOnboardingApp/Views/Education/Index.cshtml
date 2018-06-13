@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Cygnet.EmployeeOnboardingApp.Domain.ViewModel.EducationViewModel>
+
+@{
+    ViewBag.Title = "EducationDetails";
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>*@
+@*@Html.HiddenFor(model => model.UserId)*@
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.School_College)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Board_University)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Degree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year_Passing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.School_College)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Board_University)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year_Passing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+
+
+        </tr>
+    }
+
+</table>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Save and Continue" class="btn btn-default" onclick="location.href='@Url.Action("ThankYouPage","Account")'" />
+    </div>
+</div>
+
+@*</body>
+    </html>*@

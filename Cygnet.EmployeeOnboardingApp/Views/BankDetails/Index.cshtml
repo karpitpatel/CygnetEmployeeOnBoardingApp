@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Cygnet.EmployeeOnboardingApp.Data.Model.BankDetails>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Acc_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ifsc_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pan_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uan_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ins_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mediclaim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Life_Ins)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fam_PensionScheme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pf_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowVersion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acc_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ifsc_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pan_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uan_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ins_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mediclaim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Life_Ins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fam_PensionScheme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pf_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowVersion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

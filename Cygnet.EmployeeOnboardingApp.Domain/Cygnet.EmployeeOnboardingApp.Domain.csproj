@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01A4AD30-7C89-454B-B2AF-0977A02F4C55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cygnet.EmployeeOnboardingApp.Domain</RootNamespace>
+    <AssemblyName>Cygnet.EmployeeOnboardingApp.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Manager\AccomodationDetailsManager.cs" />
+    <Compile Include="Manager\AdditionalDetailsManager.cs" />
+    <Compile Include="Manager\BankDetailsManager.cs" />
+    <Compile Include="Manager\BaseManager.cs" />
+    <Compile Include="Manager\ContactDetailsManager.cs" />
+    <Compile Include="Manager\DeclarationManager.cs" />
+    <Compile Include="Manager\EducationDetailsManager.cs" />
+    <Compile Include="Manager\EducationManager.cs" />
+    <Compile Include="Manager\EducationRelationManager.cs" />
+    <Compile Include="Manager\FamilyDetailsManager.cs" />
+    <Compile Include="Manager\FamilyManager.cs" />
+    <Compile Include="Manager\FamilyRelationManager.cs" />
+    <Compile Include="Manager\NomineeDetailsManger.cs" />
+    <Compile Include="Manager\OriginDetailsManager.cs" />
+    <Compile Include="Manager\PersonalDetailsManager.cs" />
+    <Compile Include="Manager\TestUOWManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="Manager\VariousCardDetailsManager.cs" />
+    <Compile Include="Manager\WorkingHistoryDetailsManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewMapping\AccomodationDetailsMapping.cs" />
+    <Compile Include="ViewMapping\AdditionalDetailsMapping.cs" />
+    <Compile Include="ViewMapping\BankDetailsMapping.cs" />
+    <Compile Include="ViewMapping\BaseMapper.cs" />
+    <Compile Include="ViewMapping\ContactDetailsMapping.cs" />
+    <Compile Include="ViewMapping\DeclarationMapping.cs" />
+    <Compile Include="ViewMapping\EducationDetailsMapping.cs" />
+    <Compile Include="ViewMapping\EducationMapping.cs" />
+    <Compile Include="ViewMapping\EducationRelationMapping.cs" />
+    <Compile Include="ViewMapping\FamilyDetailsMapping.cs" />
+    <Compile Include="ViewMapping\FamilyMapping.cs" />
+    <Compile Include="ViewMapping\FamilyRelationMapping.cs" />
+    <Compile Include="ViewMapping\NomineeDetailsMapping.cs" />
+    <Compile Include="ViewMapping\OriginDetailsMapping.cs" />
+    <Compile Include="ViewMapping\PersonalDetailsMapping.cs" />
+    <Compile Include="ViewMapping\TestUOWMapping.cs" />
+    <Compile Include="ViewMapping\UserMapping.cs" />
+    <Compile Include="ViewMapping\VariousCardDetailsMapping.cs" />
+    <Compile Include="ViewMapping\WorkingHistoryDetailsMapping.cs" />
+    <Compile Include="ViewModel\AccomodationDetailsViewModel.cs" />
+    <Compile Include="ViewModel\AdditionalDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BankDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\ContactDetailsViewModel.cs" />
+    <Compile Include="ViewModel\DeclarationViewModel.cs" />
+    <Compile Include="ViewModel\EducationDetailsViewModel.cs" />
+    <Compile Include="ViewModel\EducationRelationViewModel.cs" />
+    <Compile Include="ViewModel\EducationViewModel.cs" />
+    <Compile Include="ViewModel\FamilyDetailsViewModel.cs" />
+    <Compile Include="ViewModel\FamilyRelationViewModel.cs" />
+    <Compile Include="ViewModel\FamilyViewModel.cs" />
+    <Compile Include="ViewModel\NomineeDetailsViewModel.cs" />
+    <Compile Include="ViewModel\OriginDetailsViewModel.cs" />
+    <Compile Include="ViewModel\PersonalDetailsViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\TestUOWViewModel.cs" />
+    <Compile Include="ViewModel\VariousCardDetailsViewModel.cs" />
+    <Compile Include="ViewModel\WorkingHistoryDetailsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.12.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cygnet.EmployeeOnboardingApp.Core.Data\Cygnet.EmployeeOnboardingApp.Core.Data.csproj">
+      <Project>{54feb34c-ed9f-4fd7-84f1-3ece087fe3bf}</Project>
+      <Name>Cygnet.EmployeeOnboardingApp.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cygnet.EmployeeOnboardingApp.Data\Cygnet.EmployeeOnboardingApp.Data.csproj">
+      <Project>{dcc73b9f-fbf8-4f25-9899-9849d31b6b42}</Project>
+      <Name>Cygnet.EmployeeOnboardingApp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

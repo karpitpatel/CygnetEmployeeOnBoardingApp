@@ -1,0 +1,10 @@
+/.vs
+/Cygnet.EmployeeOnboardingApp/obj
+/Cygnet.EmployeeOnboardingApp/bin
+/Cygnet.EmployeeOnboardingApp.Core.Data/obj
+/Cygnet.EmployeeOnboardingApp.Core.Data/bin
+/Cygnet.EmployeeOnboardingApp.Data/obj
+/Cygnet.EmployeeOnboardingApp.Data/bin
+/Cygnet.EmployeeOnboardingApp.Domain/obj
+/Cygnet.EmployeeOnboardingApp.Domain/bin
+/packages

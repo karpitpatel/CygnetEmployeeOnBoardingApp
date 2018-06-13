@@ -1,0 +1,44 @@
+﻿
+@model Cygnet.EmployeeOnboardingApp.Domain.ViewModel.UserViewModel
+@using System.Web.Mvc.Html
+@{
+    ViewBag.Title = "LoginPage";
+}
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+
+</head>
+<body>*@
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <div style="text-align:center;margin-top:10%;">
+
+        @Html.LabelFor(model => model.Email, "Email")
+        @Html.TextBoxFor(model => model.Email)
+        <br />
+        @Html.LabelFor(model => model.Password, "Password")
+        <!-- @Html.TextBoxFor(model => model.Password)-->
+        @Html.Password("Password", "", new { id = "Password", Textmode = "Password" })
+        <br />
+    </div>
+    
+    <div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+    @Html.ActionLink("Create New Account", "Create")
+
+@*</body>
+</html>*@

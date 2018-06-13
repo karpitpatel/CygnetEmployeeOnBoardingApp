@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Cygnet.EmployeeOnboardingApp.Data.Repository;
+using Cygnet.EmployeeOnboardingApp.Domain.ViewMapping;
+using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
+
+namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
+{
+    public interface IWorkingHistoryDetailsManager
+    {
+        List<WorkingHistoryDetailsViewModel> GetAllWorkingHistoryDetails();
+        WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int EmpCode);
+        void IsRegister(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel);
+        // void GetWorkingHistoryDetails(int? id);
+        void IsUpdate(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel);
+    }
+    public class WorkingHistoryDetailsManager : BaseManager, IWorkingHistoryDetailsManager
+    {
+        private readonly IWorkingHistoryDetailsRepository _workingHistoryDetailsRepository;
+        private WorkingHistoryDetailsMapping workingHistoryDetailsMapping;
+
+        public WorkingHistoryDetailsManager(IWorkingHistoryDetailsRepository workingHistoryDetailsRepository)
+        {
+            _workingHistoryDetailsRepository = workingHistoryDetailsRepository;
+            workingHistoryDetailsMapping = new WorkingHistoryDetailsMapping();
+
+        }
+        public List<WorkingHistoryDetailsViewModel> GetAllWorkingHistoryDetails()
+        {
+            var dataModelList = _workingHistoryDetailsRepository.GetWorkingHistoryDetails();
+            return workingHistoryDetailsMapping.MapToViewList(dataModelList);
+
+        }
+        public WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int EmpCode)
+        {
+            var dataModel = _workingHistoryDetailsRepository.GetWorkingHistoryDetails(EmpCode);
+            return workingHistoryDetailsMapping.MapToView(dataModel);
+
+        }
+        public void IsRegister(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel)
+        {
+            _workingHistoryDetailsRepository.IsRegisterr(workingHistoryDetailsMapping.MapToModel(workingHistoryDetailsViewModel));
+            _workingHistoryDetailsRepository.UnitOfWork.Save();
+
+        }
+        public void IsUpdate(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel)
+        {
+            _workingHistoryDetailsRepository.IsUpdatee(workingHistoryDetailsMapping.MapToModel(workingHistoryDetailsViewModel));
+            _workingHistoryDetailsRepository.UnitOfWork.Save();
+
+        }
+    }
+}
+

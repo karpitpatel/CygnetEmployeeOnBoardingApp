@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Cygnet.EmployeeOnboardingApp.Data.Model.VariousCardDetails>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Passport_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passport_Validity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Esic_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pension_Payment_OrderNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scheme_Certificate_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aadhar_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Election_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowVersion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passport_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passport_Validity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Esic_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pension_Payment_OrderNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scheme_Certificate_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aadhar_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Election_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowVersion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

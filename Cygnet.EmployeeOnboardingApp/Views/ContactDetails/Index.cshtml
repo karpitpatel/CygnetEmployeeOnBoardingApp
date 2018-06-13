@@ -1,0 +1,83 @@
+﻿@using System;
+@model Cygnet.EmployeeOnboardingApp.Data.Model.ContactDetails
+    @*using Cygnet.EmployeeOnboardingApp.Domain.ViewModel.ContactDetailsViewModel;*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+     @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HomeNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempAddr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PermAddr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode_tempaddr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode_permadrr)
+            </th>
+          
+            <th></th>
+        </tr>
+
+   
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.HomeNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.MobNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TempAddr)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PermAddr)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Pincode_tempaddr)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Pincode_permadrr)
+                </td>
+                
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })|*@
+                    @Html.ActionLink("Next", "ThankYouPage", "Account")
+                </td>
+            </tr>
+
+  
+        
+
+    </table>
+</body>
+</html>

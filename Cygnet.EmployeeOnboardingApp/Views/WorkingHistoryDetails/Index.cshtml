@@ -1,0 +1,167 @@
+﻿@model IEnumerable<Cygnet.EmployeeOnboardingApp.Data.Model.WorkingHistoryDetails>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name_Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Addr_Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation_Person_ReportingTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monthly_Gross_Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason_For_Leaving)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Detailed_By)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pension_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reporting_To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ctc_Perannum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref1_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref1_Phn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref1_Addr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref2_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref2_Phn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ref2_Addr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowVersion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name_Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addr_Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation_Person_ReportingTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monthly_Gross_Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason_For_Leaving)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detailed_By)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pension_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reporting_To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ctc_Perannum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref1_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref1_Phn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref1_Addr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref2_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref2_Phn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ref2_Addr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowVersion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
