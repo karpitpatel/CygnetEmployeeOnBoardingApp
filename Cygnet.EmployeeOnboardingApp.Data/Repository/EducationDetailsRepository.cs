@@ -1,28 +1,28 @@
-﻿using System;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Repository;
+using Cygnet.EmployeeOnboardingApp.Data.Model;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Repository;
-using Cygnet.EmployeeOnboardingApp.Data.Model;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IEducationDetailsRepository : IRepository<EducationDetails>
     {
         EducationDetails GetEducationDetails(int EmpCode);
-        ICollection<EducationDetails> GetEducationDetails();
-        void IsRegisterr(EducationDetails model);
-        void IsUpdatee(EducationDetails model);
 
+        ICollection<EducationDetails> GetEducationDetails();
+
+        void IsRegisterr(EducationDetails model);
+
+        void IsUpdatee(EducationDetails model);
     }
+
     public class EducationDetailsRepository : BaseRepository<EducationDetails>, IEducationDetailsRepository
     {
         public EducationDetailsRepository(IEmployeeOnBoardingUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
-
         }
+
         public EducationDetails GetEducationDetails(int EmpCode)
         {
             return Get(_ => _.UserId == EmpCode).FirstOrDefault();
@@ -33,18 +33,16 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
             return Get().ToList();
         }
 
-
         public void IsRegisterr(EducationDetails model)
         {
             // if (model.Email != null && model.Password != null)
             //    return Update(model).ToList();
             Insert(model);
         }
+
         public void IsUpdatee(EducationDetails model)
         {
             Update(model);
         }
-
-
     }
 }

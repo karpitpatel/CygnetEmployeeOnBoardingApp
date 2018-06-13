@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
 using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
 
 namespace Cygnet.EmployeeOnboardingApp.Domain.ViewMapping
 {
-
     public class EducationMapping : BaseMapper<EducationViewModel, Education>
     {
         public EducationMapping()
@@ -22,7 +16,5 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewMapping
             });
             Mapper = config.CreateMapper();
         }
-
     }
 }
-

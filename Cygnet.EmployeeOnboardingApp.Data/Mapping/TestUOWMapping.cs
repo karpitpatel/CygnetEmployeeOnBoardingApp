@@ -1,5 +1,4 @@
 ﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Mapping;
-using Cygnet.EmployeeOnboardingApp.Data.Mapping;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Mapping
@@ -13,9 +12,6 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Mapping
 
             // Primary key
             HasKey(t => t.Id);
-
         }
-      
     }
 }
-

@@ -20,80 +20,79 @@
             <dt>
                 @Html.DisplayNameFor(model => model.EducationRelation.Degree)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.EducationRelation.Degree)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.User.Name)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.User.Name)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.School_College)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.School_College)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Board_University)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Board_University)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Year_Passing)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Year_Passing)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Grade)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Grade)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Created)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Created)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Modified)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Modified)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.RowVersion)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.RowVersion)
             </dd>
-    
         </dl>
-    
+
         @using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
                 @Html.ActionLink("Back to List", "Index")

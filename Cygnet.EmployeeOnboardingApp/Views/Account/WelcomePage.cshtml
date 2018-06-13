@@ -1,8 +1,6 @@
 ﻿@using System.Web.Mvc;
 @model Cygnet.EmployeeOnboardingApp.Data.Model.User
 
-
-
 @{
     ViewBag.Title = "Welcome";
 }
@@ -18,17 +16,15 @@
     <div>
         <h2>Welcome</h2>
 
-         <br/>
-        <br/>
-        <br/>
-        <br/>
+         <br />
+        <br />
+        <br />
+        <br />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="button" value="LetsProceed" class="btn btn-default" onclick="location.href='@Url.Action("Create","PersonalDetails")'"/>
+                <input type="button" value="LetsProceed" class="btn btn-default" onclick="location.href='@Url.Action("Create","PersonalDetails")'" />
             </div>
         </div>
-        
-
     </div>
 </body>
 </html>

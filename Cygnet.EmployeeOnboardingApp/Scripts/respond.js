@@ -15,7 +15,6 @@
 /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
 window.matchMedia = window.matchMedia || (function (doc, undefined) {
-
     var bool,
         docElem = doc.documentElement,
         refNode = docElem.firstElementChild || docElem.firstChild,
@@ -29,7 +28,6 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
     fakeBody.appendChild(div);
 
     return function (q) {
-
         div.innerHTML = '&shy;<style media="' + q + '"> #mq-test-1 { width: 42px; }</style>';
 
         docElem.insertBefore(fakeBody, refNode);
@@ -38,11 +36,7 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
 
         return { matches: bool, media: q };
     };
-
 })(document);
-
-
-
 
 /*! Respond.js v1.2.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
 (function (win) {
@@ -135,14 +129,13 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
             //if path exists, tack on trailing slash
             if (href.length) { href += "/"; }
 
-            //if no internal queries exist, but media attr does, use that	
+            //if no internal queries exist, but media attr does, use that
             //note: this currently lacks support for situations where a media attr is specified on a link AND
             //its associated stylesheet has internal CSS media queries.
             //In those cases, the media attribute will currently be ignored.
             if (useMedia) {
                 ql = 1;
             }
-
 
             for (; i < ql; i++) {
                 j = 0;
@@ -213,7 +206,7 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
             return ret;
         },
 
-        //cached container for 1em value, populated the first time it's needed 
+        //cached container for 1em value, populated the first time it's needed
         eminpx,
 
         //enable/disable styles
@@ -225,7 +218,7 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
                 lastLink = links[links.length - 1],
                 now = (new Date()).getTime();
 
-            //throttle resize calls	
+            //throttle resize calls
             if (fromResize && lastCall && now - lastCall < resizeThrottle) {
                 clearTimeout(resizeDefer);
                 resizeDefer = setTimeout(applyMedia, resizeThrottle);
@@ -307,7 +300,7 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
             }
             req.send(null);
         },
-        //define ajax obj 
+        //define ajax obj
         xmlHttp = (function () {
             var xmlhttpmethod = false;
             try {

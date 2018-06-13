@@ -1,10 +1,7 @@
 namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
 {
     using Cygnet.EmployeeOnboardingApp.Data.Model;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Cygnet.EmployeeOnboardingApp.Data.Context.EmployeeOnBoardingEntities>
     {
@@ -18,9 +15,10 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
           {
               //  This method will be called after migrating to the latest version.
 
-              //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+              //  You can use the DbSet<T>.AddOrUpdate() helper extension method
               //  to avoid creating duplicate seed data.
           }*/
+
         protected override void Seed(Cygnet.EmployeeOnboardingApp.Data.Context.EmployeeOnBoardingEntities context)
         {
             context.FamilyRelation.AddOrUpdate(x => x.Id,
@@ -41,9 +39,6 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
 
                 );
             context.SaveChanges();
-
-
         }
-        
     }
 }

@@ -20,56 +20,55 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Name)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Name)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Relationship)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Relationship)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Address)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Address)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Created)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Created)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Modified)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Modified)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.RowVersion)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.RowVersion)
             </dd>
-    
         </dl>
-    
+
         @using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
                 @Html.ActionLink("Back to List", "Index")

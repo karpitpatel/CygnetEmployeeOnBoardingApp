@@ -11,12 +11,8 @@ namespace Cygnet.EmployeeOnboardingApp.Core.Data.Repository
     }
 }*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+using System;
 
 namespace Cygnet.EmployeeOnboardingApp.Core.Data.Repository
 {

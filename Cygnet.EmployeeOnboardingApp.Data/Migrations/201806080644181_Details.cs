@@ -1,8 +1,7 @@
 namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class Details : DbMigration
     {
         public override void Up()
@@ -11,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
             DropIndex("dbo.FamilyRelation", new[] { "FamilyRelation_Id" });
             DropColumn("dbo.FamilyRelation", "FamilyRelation_Id");
         }
-        
+
         public override void Down()
         {
             AddColumn("dbo.FamilyRelation", "FamilyRelation_Id", c => c.Int());

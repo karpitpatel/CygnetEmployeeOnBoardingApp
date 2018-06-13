@@ -1,12 +1,6 @@
-﻿
-
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
 {
@@ -21,4 +15,3 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public DateTime Modified { get; set; }
     }
 }
-

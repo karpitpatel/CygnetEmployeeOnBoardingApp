@@ -12,14 +12,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
 }
 */
 
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
+using System.Data.Entity;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Context
 {
@@ -39,11 +34,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
         IDbSet<WorkingHistoryDetails> WorkingHistoryDetails { get; set; }
         IDbSet<Declaration> Declaration { get; set; }
         IDbSet<AdditionalDetails> AdditionalDetails { get; set; }
-        IDbSet<EducationRelation> EducationRelation{ get; set; }
-        IDbSet<EducationDetails> EducationDetails{ get; set; }
-        IDbSet<Education> Education{ get; set; }
+        IDbSet<EducationRelation> EducationRelation { get; set; }
+        IDbSet<EducationDetails> EducationDetails { get; set; }
+        IDbSet<Education> Education { get; set; }
         IDbSet<Family> Family { get; set; }
-
-
     }
 }

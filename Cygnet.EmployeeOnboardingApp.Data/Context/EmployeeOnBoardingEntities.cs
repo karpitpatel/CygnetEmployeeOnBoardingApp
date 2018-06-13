@@ -1,13 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
 using Cygnet.EmployeeOnboardingApp.Data.Mapping;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
+using System.Data.Entity;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Context
 {
@@ -15,12 +9,11 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
     {
         public EmployeeOnBoardingEntities()
         {
-
         }
+
         public EmployeeOnBoardingEntities(string connectionString)
             : base(connectionString)
         {
-
         }
 
         public IDbSet<TestUOW> TestUOW { get; set; }
@@ -29,7 +22,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
         public IDbSet<ContactDetails> ContactDetails { get; set; }
         public IDbSet<AccomodationDetails> AccomodationDetails { get; set; }
         public IDbSet<BankDetails> BankDetails { get; set; }
-        public IDbSet<FamilyRelation> FamilyRelation{ get; set; }
+        public IDbSet<FamilyRelation> FamilyRelation { get; set; }
         public IDbSet<FamilyDetails> FamilyDetails { get; set; }
         public IDbSet<NomineeDetails> NomineeDetails { get; set; }
         public IDbSet<OriginDetails> OriginDetails { get; set; }
@@ -37,12 +30,10 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
         public IDbSet<WorkingHistoryDetails> WorkingHistoryDetails { get; set; }
         public IDbSet<Declaration> Declaration { get; set; }
         public IDbSet<AdditionalDetails> AdditionalDetails { get; set; }
-        public IDbSet<EducationRelation> EducationRelation{ get; set; }
+        public IDbSet<EducationRelation> EducationRelation { get; set; }
         public IDbSet<EducationDetails> EducationDetails { get; set; }
         public IDbSet<Family> Family { get; set; }
         public IDbSet<Education> Education { get; set; }
-
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -66,9 +57,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
             modelBuilder.Configurations.Add(new EducationRelationMapping());
             modelBuilder.Configurations.Add(new EducationDetailsMapping());
             modelBuilder.Configurations.Add(new EducationMapping());
-
-
         }
+
         /// <summary>
         /// Releases unmanaged and - optionally - managed resources.
         /// </summary>
@@ -78,9 +68,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
             base.Dispose(disposing);
         }
 
-       // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.Education> Educations { get; set; }
+        // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.Education> Educations { get; set; }
 
-       // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.User> Users { get; set; }
+        // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.User> Users { get; set; }
 
         // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.Family> Families { get; set; }
 
@@ -99,4 +89,3 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
         // public System.Data.Entity.DbSet<Cygnet.EmployeeOnboardingApp.Data.Model.ContactDetails> ContactDetails { get; set; }
     }
 }
-

@@ -1,31 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Cygnet.EmployeeOnboardingApp.Data.Context;
-using Cygnet.EmployeeOnboardingApp.Data.Model;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+﻿using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Repository;
-using Cygnet.EmployeeOnboardingApp.Data.Repository;
-using Cygnet.EmployeeOnboardingApp.Domain.Manager;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace Cygnet.EmployeeOnboardingApp.Controllers
 {
     public class EducationController : Controller
     {
-
         private readonly IEducationManager _educationManager;
 
         public EducationController(IEducationManager educationManager)
         {
             _educationManager = educationManager;
         }
+
         public ActionResult Index()
         {
             var education = _educationManager.GetAllEducation((int)Session["EmpId"]);
@@ -38,8 +27,6 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             //return View();
         }
 
-
-
         public ActionResult Create()
         {
             var education = _educationManager.GetEducation((int)Session["EmpId"]);
@@ -48,11 +35,10 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             //else
             //    return View(education);
             //return View();
-
         }
 
         // POST: EducationDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -68,6 +54,7 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
             return View(educationViewModel);
         }
+
         public ActionResult Edit(int id)
         {
             // Session["RelId"] = id;
@@ -76,12 +63,8 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
                 return View("Index");
             else
             {
-
                 return View(education);
             }
-
-
-
         }
     }
 }
