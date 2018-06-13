@@ -17,6 +17,9 @@ using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 
 namespace Cygnet.EmployeeOnboardingApp.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class AccomodationDetailsController : Controller
     {
 
