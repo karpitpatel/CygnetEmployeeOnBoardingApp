@@ -26,7 +26,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public Family GetFamily(int Id)
         {
-            return Get(_ => _.Id == Id).FirstOrDefault();
+            return Get(_ => _.Id == Id).LastOrDefault();
         }
 
         public ICollection<Family> GetAllFamily(int UserId)

@@ -25,7 +25,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public BankDetails GetBankDetails(int UserId)
         {
-            return Get(_ => _.UserId == UserId).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).LastOrDefault();
         }
         public ICollection<BankDetails> GetBankDetails()
         {

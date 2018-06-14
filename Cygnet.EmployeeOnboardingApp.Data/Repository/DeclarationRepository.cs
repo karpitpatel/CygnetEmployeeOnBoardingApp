@@ -24,7 +24,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public Declaration GetDeclaration(int UserId)
         {
-            return Get(_ => _.UserId == UserId).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).LastOrDefault();
         }
         public ICollection<Declaration> GetDeclaration()
         {

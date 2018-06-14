@@ -19,9 +19,11 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Is_Mem_Epf_Schema { get; set; }
 
         [DisplayName("Date of Allotment of Insurance Number")]
-        public DateTime Dt_Allot_Ins_No { get; set; }
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> Dt_Allot_Ins_No { get; set; }
 
         [DisplayName("Date of Issue of TIC")]
-        public DateTime Dt_Issue_Tic { get; set; }
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> Dt_Issue_Tic { get; set; }
     }
 }

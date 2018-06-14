@@ -25,7 +25,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 
         public OriginDetails GetOriginDetails(int EmpCode)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == EmpCode).LastOrDefault();
         }
 
         public ICollection<OriginDetails> GetOriginDetails()

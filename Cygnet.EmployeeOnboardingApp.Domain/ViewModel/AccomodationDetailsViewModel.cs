@@ -18,6 +18,8 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Owner_Name { get; set; }
 
         [DisplayName("Owner's Contact Number")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Owner_Contact { get; set; }
 
         [DisplayName("Owner's Address")]
@@ -30,6 +32,8 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Neigh1_Name { get; set; }
 
         [DisplayName("Neighbour's Contact")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Neigh1_Contact { get; set; }
 
         [DisplayName("Neighbour's Occupation")]

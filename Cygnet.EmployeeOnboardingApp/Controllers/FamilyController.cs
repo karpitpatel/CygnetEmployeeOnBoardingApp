@@ -46,22 +46,32 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             if (ModelState.IsValid)
             {
                 _familyManager.IsRegister(familyViewModel);
-                // return RedirectToAction("ThankYouPage", "Account");
-                return View();
+                return RedirectToAction("Index", "Family");
+              //  return View("Index");
             }
 
             return View(familyViewModel);
         }
-        public ActionResult Edit(int Id)
-        {
+        //public ActionResult Edit(int Id)
+        //{
            
-            var family = _familyManager.GetFamily(Id);
-            if (family == null)
-                return View("Index");
-            else
-            {
-                return View(family);
-            }
-        }
+        //    var family = _familyManager.GetFamily(Id);
+        //    if (family == null)
+        //        return View("Index");
+        //    else
+        //    {
+        //        return View(family);
+        //    }
+        //}
+        //[HttpPost]
+        //public ActionResult Edit(FamilyViewModel familyViewModel)
+        //{
+        //    _familyManager.IsUpdate(familyViewModel);
+
+        
+            
+        //        return RedirectToAction("Index","Family");
+           
+        //}
     }
 }

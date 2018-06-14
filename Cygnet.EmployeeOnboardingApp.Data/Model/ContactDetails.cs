@@ -6,12 +6,12 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
     public class ContactDetails : BaseEntity
     {
         public string Email { get; set; }
-        public int HomeNo { get; set; }
-        public int MobNo { get; set; }
+        public string HomeNo { get; set; }
+        public string MobNo { get; set; }
         public string TempAddr { get; set; }
         public string PermAddr { get; set; }
-        public int Pincode_tempaddr { get; set; }
-        public int Pincode_permadrr { get; set; }
+        public string Pincode_tempaddr { get; set; }
+        public string Pincode_permadrr { get; set; }
         public int UserId { get; set; }
 
         [ForeignKey("UserId")]

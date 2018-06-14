@@ -25,7 +25,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public ContactDetails GetContactDetails(int UserId)
         {
-            return Get(_ => _.UserId == UserId).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).LastOrDefault();
         }
         public ICollection<ContactDetails> GetContactDetails()
         {

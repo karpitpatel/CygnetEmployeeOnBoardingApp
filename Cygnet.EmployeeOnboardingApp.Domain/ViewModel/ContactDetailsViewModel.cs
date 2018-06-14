@@ -16,13 +16,17 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Email { get; set; }
 
         [Required]
-        [DataType(DataType.PhoneNumber)]
+        
         [DisplayName("Home Contact Number")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string HomeNo { get; set; }
 
         [Required]
-        [DataType(DataType.PhoneNumber)]
+       
         [DisplayName("Mobile Number")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string MobNo { get; set; }
 
         [Required]
@@ -31,16 +35,17 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
 
         [Required]
         [DisplayName("Pincode")]
-        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
+        //[DataType(DataType.PostalCode)]
+        [StringLength(6, ErrorMessage = "Invalid Pincode", MinimumLength = 6)]
         public string Pincode_tempaddr { get; set; }
 
         [Required]
         [DisplayName("Pemanent Address")]
-        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         public string PermAddr { get; set; }
 
         [Required]
         [DisplayName("Pincode")]
+        [StringLength(6, ErrorMessage = "Invalid Pincode", MinimumLength = 6)]
         public string Pincode_permadrr { get; set; }
     }
 }

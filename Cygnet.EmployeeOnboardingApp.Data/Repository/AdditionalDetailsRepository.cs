@@ -25,7 +25,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 
         public AdditionalDetails GetAdditionalDetails(int UserId)
         {
-            return Get(_ => _.UserId == UserId).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).LastOrDefault();
         }
 
         public ICollection<AdditionalDetails> GetAdditionalDetails()

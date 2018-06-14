@@ -12,7 +12,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public string Marital_Stat { get; set; }
         public string Date_Anniv { get; set; }
 
-        public Nullable<System.DateTime> Dob { get; set; }
+        public DateTime Dob { get; set; }
 
         // public DateTime Dob { get; set; }
         public string Name_Company { get; set; }

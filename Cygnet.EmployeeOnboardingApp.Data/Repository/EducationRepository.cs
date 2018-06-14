@@ -26,7 +26,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public Education GetEducation(int Id)
         {
-            return Get(_ => _.Id == Id).FirstOrDefault();
+            return Get(_ => _.Id == Id).LastOrDefault();
         }
 
         public ICollection<Education> GetAllEducation(int UserId)

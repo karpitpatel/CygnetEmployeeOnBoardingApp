@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
@@ -14,8 +15,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Passport_No { get; set; }
 
         [DisplayName("Validity of Passport")]
-        public string Passport_Validity { get; set; }
-
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> Passport_Validity { get; set; }
+       
         [DisplayName("ESIC Number")]
         public string Esic_No { get; set; }
 

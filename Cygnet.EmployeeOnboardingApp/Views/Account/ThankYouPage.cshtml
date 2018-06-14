@@ -1,17 +1,24 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title="ThankYou";
 }
 
 <!DOCTYPE html>
 
-<html>
+@*<html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>ThankYouPage</title>
 </head>
-<body>
+<body>*@
+
     <div>
         <h2>ThankYou!</h2>
     </div>
-</body>
-</html>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="Logout" class="btn btn-default" onclick="location.href='@Url.Action("Login","Account")'" />
+        </div>
+    </div>
+
+@*</body>
+</html>*@

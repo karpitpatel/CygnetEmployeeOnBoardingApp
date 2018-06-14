@@ -28,12 +28,13 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         [DisplayName("Date Of Anniversary")]
         public string Date_Anniv { get; set; }
 
-        [Required(ErrorMessage = "Dob is mandatory.")]
-        [DisplayName("Date Of Birth")]
-        //public DateTime Dob { get; set; }
 
+        [Required]
+        [Display(Name = "Date of Birth")]
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public Nullable<System.DateTime> Dob { get; set; }
+        public Nullable<System.DateTime> Dob{ get; set; }
+
+
 
         [Required]
         [DisplayName("Name Of the Company")]
@@ -52,8 +53,5 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Allergy { get; set; }
         public string Ailment { get; set; }
 
-        /*   [ForeignKey("User")]
-           public string Name { get; set; }
-           public virtual User User { get; set; }*/
     }
 }

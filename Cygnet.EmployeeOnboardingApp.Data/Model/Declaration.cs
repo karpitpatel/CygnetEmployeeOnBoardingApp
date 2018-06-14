@@ -9,6 +9,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public string Kyc_Details { get; set; }
         public string Is_Mem_Epf_Schema { get; set; }
         public DateTime Dt_Allot_Ins_No { get; set; }
+        public DateTime Dt_Issue_Tic { get; set; }
         public int UserId { get; set; }
 
         [ForeignKey("UserId")]

@@ -24,7 +24,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         }
         public PersonalDetails GetPersonalDetails(int UserId)
         {
-            return Get(_ => _.UserId == UserId).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).LastOrDefault();
         }
         public ICollection<PersonalDetails> GetPersonalDetails()
         {

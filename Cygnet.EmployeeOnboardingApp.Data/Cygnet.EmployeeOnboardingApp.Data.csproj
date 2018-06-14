@@ -66,37 +66,9 @@
     <Compile Include="Mapping\TestUOWMapping.cs" />
     <Compile Include="Mapping\VariousCardDetailsMapping.cs" />
     <Compile Include="Mapping\WorkingHistoryDetailsMapping.cs" />
-    <Compile Include="Migrations\201806071720596_InitialCreate.cs" />
-    <Compile Include="Migrations\201806071720596_InitialCreate.Designer.cs">
-      <DependentUpon>201806071720596_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806080644181_Details.cs" />
-    <Compile Include="Migrations\201806080644181_Details.Designer.cs">
-      <DependentUpon>201806080644181_Details.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806080911401_Details2.cs" />
-    <Compile Include="Migrations\201806080911401_Details2.Designer.cs">
-      <DependentUpon>201806080911401_Details2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110748015_Details3.cs" />
-    <Compile Include="Migrations\201806110748015_Details3.Designer.cs">
-      <DependentUpon>201806110748015_Details3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110907053_Details4.cs" />
-    <Compile Include="Migrations\201806110907053_Details4.Designer.cs">
-      <DependentUpon>201806110907053_Details4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806130623406_Details5.cs" />
-    <Compile Include="Migrations\201806130623406_Details5.Designer.cs">
-      <DependentUpon>201806130623406_Details5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806130630102_Details6.cs" />
-    <Compile Include="Migrations\201806130630102_Details6.Designer.cs">
-      <DependentUpon>201806130630102_Details6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806131826215_Details7.cs" />
-    <Compile Include="Migrations\201806131826215_Details7.Designer.cs">
-      <DependentUpon>201806131826215_Details7.cs</DependentUpon>
+    <Compile Include="Migrations\201806140932599_InitialCreate.cs" />
+    <Compile Include="Migrations\201806140932599_InitialCreate.Designer.cs">
+      <DependentUpon>201806140932599_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AccomodationDetails.cs" />
@@ -142,37 +114,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806071720596_InitialCreate.resx">
-      <DependentUpon>201806071720596_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806080644181_Details.resx">
-      <DependentUpon>201806080644181_Details.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806080911401_Details2.resx">
-      <DependentUpon>201806080911401_Details2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110748015_Details3.resx">
-      <DependentUpon>201806110748015_Details3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110907053_Details4.resx">
-      <DependentUpon>201806110907053_Details4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806130623406_Details5.resx">
-      <DependentUpon>201806130623406_Details5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806130630102_Details6.resx">
-      <DependentUpon>201806130630102_Details6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806131826215_Details7.resx">
-      <DependentUpon>201806131826215_Details7.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806140932599_InitialCreate.resx">
+      <DependentUpon>201806140932599_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

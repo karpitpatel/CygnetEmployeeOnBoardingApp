@@ -33,11 +33,13 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
 
         [Required]
         [DisplayName("Date Of Joining")]
-        public DateTime Doj { get; set; }
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> Doj { get; set; }
 
         [Required]
         [DisplayName("Date Of Leaving")]
-        public DateTime Dol { get; set; }
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> Dol { get; set; }
 
         [Required]
         [DisplayName("Monthly Gross Salary")]
@@ -48,7 +50,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Reason_For_Leaving { get; set; }
 
         [Required]
-        [DisplayName("Reason For Leaving")]
+        [DisplayName("Detailed By")]
         public string Detailed_By { get; set; }
 
         [Required]

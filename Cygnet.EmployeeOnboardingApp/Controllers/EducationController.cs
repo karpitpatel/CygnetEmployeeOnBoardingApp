@@ -42,8 +42,8 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             if (ModelState.IsValid)
             {
                 _educationManager.IsRegister(educationViewModel);
-              
-                return View();
+                return RedirectToAction("Index", "Education");
+                // return View();
             }
 
             return View(educationViewModel);

@@ -2,7 +2,7 @@
 using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
 using System.Web.Mvc;
 
-//using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
+
 
 namespace Cygnet.EmployeeOnboardingApp.Controllers
 {
