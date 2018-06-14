@@ -42,10 +42,6 @@ namespace Cygnet.EmployeeOnboardingApp.Injection
             _kernel.Bind<IWorkingHistoryDetailsManager>().To<WorkingHistoryDetailsManager>();
             _kernel.Bind<IVariousCardDetailsManager>().To<VariousCardDetailsManager>();
             _kernel.Bind<IDeclarationManager>().To<DeclarationManager>();
-            _kernel.Bind<IFamilyRelationManager>().To<FamilyRelationManager>();
-            _kernel.Bind<IFamilyDetailsManager>().To<FamilyDetailsManager>();
-            _kernel.Bind<IEducationRelationManager>().To<EducationRelationManager>();
-            _kernel.Bind<IEducationDetailsManager>().To<EducationDetailsManager>();
             _kernel.Bind<IFamilyManager>().To<FamilyManager>();
             _kernel.Bind<IEducationManager>().To<EducationManager>();
 
@@ -65,10 +61,6 @@ namespace Cygnet.EmployeeOnboardingApp.Injection
             _kernel.Bind<IVariousCardDetailsRepository>().To<VariousCardDetailsRepository>();
             _kernel.Bind<IDeclarationRepository>().To<DeclarationRepository>();
             _kernel.Bind<INomineeDetailsRepository>().To<NomineeDetailsRepository>();
-            _kernel.Bind<IFamilyRelationRepository>().To<FamilyRelationRepository>();
-            _kernel.Bind<IFamilyDetailsRepository>().To<FamilyDetailsRepository>();
-            _kernel.Bind<IEducationRelationRepository>().To<EducationRelationRepository>();
-            _kernel.Bind<IEducationDetailsRepository>().To<EducationDetailsRepository>();
             _kernel.Bind<IFamilyRepository>().To<FamilyRepository>();
             _kernel.Bind<IEducationRepository>().To<EducationRepository>();
 

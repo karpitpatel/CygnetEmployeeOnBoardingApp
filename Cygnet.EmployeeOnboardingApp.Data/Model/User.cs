@@ -9,8 +9,7 @@ using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
     public class User : BaseEntity
-    {    //[Key]
-        //public int UserId { get; set; }
+    { 
 
         public string Name { get; set; }
 
@@ -18,13 +17,15 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public string Email { get; set; }
    
         public string Password { get; set; }
+
         public ICollection<PersonalDetails> PersonalDetails { get; set; }
         public ICollection<ContactDetails> ContactDetails { get; set; }
         public ICollection<AccomodationDetails> AccomodationDetails { get; set; }
         public ICollection<AdditionalDetails> AdditionalDetails { get; set; }
         public ICollection<BankDetails> BankDetails { get; set; }
-        public ICollection<FamilyDetails> FamilyDetails { get; set; }
+ 
         public ICollection<Family> Family { get; set; }
+        public ICollection<Education> Education{ get; set; }
         public ICollection<Declaration> Declaration { get; set; }
         public ICollection<NomineeDetails> NomineeDetails { get; set; }
         public ICollection<OriginDetails> OriginDetails { get; set; }

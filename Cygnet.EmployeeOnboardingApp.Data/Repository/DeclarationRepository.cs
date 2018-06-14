@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IDeclarationRepository : IRepository<Declaration>
     {
-        Declaration GetDeclaration(int EmpCode);
+        Declaration GetDeclaration(int UserId);
         ICollection<Declaration> GetDeclaration();
         void IsRegisterr(Declaration model);
         void IsUpdatee(Declaration model);
@@ -22,9 +22,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public Declaration GetDeclaration(int EmpCode)
+        public Declaration GetDeclaration(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<Declaration> GetDeclaration()
         {

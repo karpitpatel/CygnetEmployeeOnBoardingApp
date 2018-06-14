@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IVariousCardDetailsManager
     {
         List<VariousCardDetailsViewModel> GetAllVariousCardDetails();
-        VariousCardDetailsViewModel GetVariousCardDetails(int EmpCode);
+        VariousCardDetailsViewModel GetVariousCardDetails(int UserId);
         void IsRegister(VariousCardDetailsViewModel variousCardDetailsViewModel);
-        // void GetVariousCardDetails(int? id);
+       
         void IsUpdate(VariousCardDetailsViewModel variousCardDetailsViewModel);
     }
     public class VariousCardDetailsManager : BaseManager, IVariousCardDetailsManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return variousCardDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public VariousCardDetailsViewModel GetVariousCardDetails(int EmpCode)
+        public VariousCardDetailsViewModel GetVariousCardDetails(int UserId)
         {
-            var dataModel = _variousCardDetailsRepository.GetVariousCardDetails(EmpCode);
+            var dataModel = _variousCardDetailsRepository.GetVariousCardDetails(UserId);
             return variousCardDetailsMapping.MapToView(dataModel);
 
         }

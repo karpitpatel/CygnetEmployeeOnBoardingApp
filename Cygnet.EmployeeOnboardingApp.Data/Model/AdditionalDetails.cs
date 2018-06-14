@@ -11,8 +11,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
     public class AdditionalDetails : BaseEntity
     {
-        //   public int Id { get; set; }
-      
+    
         public string Rel_With_Present_Emp { get; set; }
         public string Name_Emp { get; set; }
         public string Relationship { get; set; }

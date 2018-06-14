@@ -31,9 +31,9 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
        
         public ActionResult Create()
         {
-            var nomineeDetails = _nomineeDetailsManager.GetNomineeDetails((int)Session["EmpId"]);
+            var nomineeDetails = _nomineeDetailsManager.GetNomineeDetails((int)Session["UserId"]);
             if (nomineeDetails == null)
-                return View(new NomineeDetailsViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new NomineeDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(nomineeDetails);
             //return View();

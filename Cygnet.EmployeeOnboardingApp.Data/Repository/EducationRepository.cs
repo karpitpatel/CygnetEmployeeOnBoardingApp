@@ -10,8 +10,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IEducationRepository : IRepository<Education>
     {
-        Education GetEducation(int EmpCode);
-        ICollection<Education> GetAllEducation(int EmpCode);
+        Education GetEducation(int Id);
+        ICollection<Education> GetAllEducation(int UserId);
         ICollection<Education> GetEducation();
         void IsRegisterr(Education model);
         void IsUpdatee(Education model);
@@ -24,14 +24,14 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public Education GetEducation(int EmpCode)
+        public Education GetEducation(int Id)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.Id == Id).FirstOrDefault();
         }
 
-        public ICollection<Education> GetAllEducation(int EmpCode)
+        public ICollection<Education> GetAllEducation(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).ToList();
+            return Get(_ => _.UserId == UserId).ToList();
         }
 
         public ICollection<Education> GetEducation()
@@ -42,8 +42,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 
         public void IsRegisterr(Education model)
         {
-            // if (model.Email != null && model.Password != null)
-            //    return Update(model).ToList();
+            
             Insert(model);
         }
         public void IsUpdatee(Education model)

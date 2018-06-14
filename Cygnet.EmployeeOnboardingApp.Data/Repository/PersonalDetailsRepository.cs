@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IPersonalDetailsRepository : IRepository<PersonalDetails>
     {
-        PersonalDetails GetPersonalDetails(int EmpCode);
+        PersonalDetails GetPersonalDetails(int UserId);
         ICollection<PersonalDetails> GetPersonalDetails();
         void IsRegisterr(PersonalDetails model);
         void IsUpdatee(PersonalDetails model);
@@ -22,9 +22,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public PersonalDetails GetPersonalDetails(int EmpCode)
+        public PersonalDetails GetPersonalDetails(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<PersonalDetails> GetPersonalDetails()
         {

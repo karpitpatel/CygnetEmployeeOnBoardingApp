@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IWorkingHistoryDetailsRepository : IRepository<WorkingHistoryDetails>
     {
-        WorkingHistoryDetails GetWorkingHistoryDetails(int EmpCode);
+        WorkingHistoryDetails GetWorkingHistoryDetails(int UserId);
         ICollection<WorkingHistoryDetails> GetWorkingHistoryDetails();
         void IsRegisterr(WorkingHistoryDetails model);
         void IsUpdatee(WorkingHistoryDetails model);
@@ -22,9 +22,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public WorkingHistoryDetails GetWorkingHistoryDetails(int EmpCode)
+        public WorkingHistoryDetails GetWorkingHistoryDetails(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<WorkingHistoryDetails> GetWorkingHistoryDetails()
         {

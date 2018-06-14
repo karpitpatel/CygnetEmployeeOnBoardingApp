@@ -57,12 +57,8 @@
     <Compile Include="Mapping\BankDetailsMapping.cs" />
     <Compile Include="Mapping\ContactDetailsMapping.cs" />
     <Compile Include="Mapping\DeclarationMapping.cs" />
-    <Compile Include="Mapping\EducationDetailsMapping.cs" />
     <Compile Include="Mapping\EducationMapping.cs" />
-    <Compile Include="Mapping\EducationRelationMapping.cs" />
-    <Compile Include="Mapping\FamilyDetailsMapping.cs" />
     <Compile Include="Mapping\FamilyMapping.cs" />
-    <Compile Include="Mapping\FamilyRelationMapping.cs" />
     <Compile Include="Mapping\NomineeDetailsMapping.cs" />
     <Compile Include="Mapping\OriginDetailsMapping.cs" />
     <Compile Include="Mapping\PersonalDetailsMapping.cs" />
@@ -98,6 +94,10 @@
     <Compile Include="Migrations\201806130630102_Details6.Designer.cs">
       <DependentUpon>201806130630102_Details6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806131826215_Details7.cs" />
+    <Compile Include="Migrations\201806131826215_Details7.Designer.cs">
+      <DependentUpon>201806131826215_Details7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AccomodationDetails.cs" />
     <Compile Include="Model\AdditionalDetails.cs" />
@@ -105,11 +105,7 @@
     <Compile Include="Model\ContactDetails.cs" />
     <Compile Include="Model\Declaration.cs" />
     <Compile Include="Model\Education.cs" />
-    <Compile Include="Model\EducationDetails.cs" />
-    <Compile Include="Model\EducationRelation.cs" />
     <Compile Include="Model\Family.cs" />
-    <Compile Include="Model\FamilyDetails.cs" />
-    <Compile Include="Model\FamilyRelation.cs" />
     <Compile Include="Model\NomineeDetails.cs" />
     <Compile Include="Model\OriginDetails.cs" />
     <Compile Include="Model\PersonalDetails.cs" />
@@ -123,11 +119,7 @@
     <Compile Include="Repository\BankDetailsRepository.cs" />
     <Compile Include="Repository\ContactDetailsRepository.cs" />
     <Compile Include="Repository\DeclarationRepository.cs" />
-    <Compile Include="Repository\EducationDetailsRepository.cs" />
-    <Compile Include="Repository\EducationRelationRepository.cs" />
     <Compile Include="Repository\EducationRepository.cs" />
-    <Compile Include="Repository\FamilyDetailsRepository.cs" />
-    <Compile Include="Repository\FamilyRelationRepository.cs" />
     <Compile Include="Repository\FamilyRepository.cs" />
     <Compile Include="Repository\NomineeDetailsRepository.cs" />
     <Compile Include="Repository\OriginDetailsRepository.cs" />
@@ -170,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806130630102_Details6.resx">
       <DependentUpon>201806130630102_Details6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131826215_Details7.resx">
+      <DependentUpon>201806131826215_Details7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

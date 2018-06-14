@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IPersonalDetailsManager
     {
         List<PersonalDetailsViewModel> GetAllPersonalDetails();
-        PersonalDetailsViewModel GetPersonalDetails(int EmpCode);
+        PersonalDetailsViewModel GetPersonalDetails(int UserId);
         void IsRegister(PersonalDetailsViewModel personalDetailsViewModel);
-        // void GetpersonalalDetails(int? id);
+        
         void IsUpdate(PersonalDetailsViewModel personalDetailsViewModel);
     }
     public class PersonalDetailsManager : BaseManager, IPersonalDetailsManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return personalDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public PersonalDetailsViewModel GetPersonalDetails(int EmpCode)
+        public PersonalDetailsViewModel GetPersonalDetails(int UserId)
         {
-            var dataModel = _personalDetailsRepository.GetPersonalDetails(EmpCode);
+            var dataModel = _personalDetailsRepository.GetPersonalDetails(UserId);
             return personalDetailsMapping.MapToView(dataModel);
 
         }

@@ -13,7 +13,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IOriginDetailsManager
     {
         List<OriginDetailsViewModel> GetAllOriginDetails();
-        OriginDetailsViewModel GetOriginDetails(int EmpCode);
+        OriginDetailsViewModel GetOriginDetails(int UserId);
         void IsRegister(OriginDetailsViewModel originDetailsViewModel);
         // void GetOriginDetails(int? id);
         void IsUpdate(OriginDetailsViewModel originDetailsViewModel);
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return originDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public OriginDetailsViewModel GetOriginDetails(int EmpCode)
+        public OriginDetailsViewModel GetOriginDetails(int UserId)
         {
-            var dataModel = _originDetailsRepository.GetOriginDetails(EmpCode);
+            var dataModel = _originDetailsRepository.GetOriginDetails(UserId);
             return originDetailsMapping.MapToView(dataModel);
 
         }

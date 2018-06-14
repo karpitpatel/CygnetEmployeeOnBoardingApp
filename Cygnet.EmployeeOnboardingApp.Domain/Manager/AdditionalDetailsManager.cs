@@ -13,9 +13,8 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IAdditionalDetailsManager
     {
         List<AdditionalDetailsViewModel> GetAllAdditionalDetails();
-        AdditionalDetailsViewModel GetAdditionalDetails(int EmpCode);
+        AdditionalDetailsViewModel GetAdditionalDetails(int UserId);
         void IsRegister(AdditionalDetailsViewModel additionalDetailsViewModel);
-        // void GetAdditionalDetails(int? id);
         void IsUpdate(AdditionalDetailsViewModel additionalDetailsViewModel);
     }
     public class AdditionalDetailsManager : BaseManager, IAdditionalDetailsManager
@@ -35,9 +34,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return additionalDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public AdditionalDetailsViewModel GetAdditionalDetails(int EmpCode)
+        public AdditionalDetailsViewModel GetAdditionalDetails(int UserId)
         {
-            var dataModel = _additionalDetailsRepository.GetAdditionalDetails(EmpCode);
+            var dataModel = _additionalDetailsRepository.GetAdditionalDetails(UserId);
             return additionalDetailsMapping.MapToView(dataModel);
 
         }

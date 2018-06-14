@@ -13,10 +13,10 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IContactDetailsManager
     {
         List<ContactDetailsViewModel> GetAllContactDetails();
-         ContactDetailsViewModel GetContactDetails(int EmpCode);
-       // ContactDetailsViewModel GetContactDetails(ContactDetailsViewModel contactDetailsViewModel);
+         ContactDetailsViewModel GetContactDetails(int UserId);
+       
         void IsRegister(ContactDetailsViewModel contactDetailsViewModel);
-        // void GetContactDetails(int? id);
+ 
         void IsUpdate(ContactDetailsViewModel contactDetailsViewModel);
     }
     public class ContactDetailsManager : BaseManager, IContactDetailsManager
@@ -36,9 +36,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return contactDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public ContactDetailsViewModel GetContactDetails(int EmpCode)
+        public ContactDetailsViewModel GetContactDetails(int UserId)
         {
-            var dataModel = _contactDetailsRepository.GetContactDetails(EmpCode);
+            var dataModel = _contactDetailsRepository.GetContactDetails(UserId);
             return contactDetailsMapping.MapToView(dataModel);
 
         }

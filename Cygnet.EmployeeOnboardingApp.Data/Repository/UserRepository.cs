@@ -13,7 +13,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
       User GetUser(string Email);
         ICollection<User> GetUser();
        User UserLogin(string userName, string password);
-      void Isfieldd(User model);
+      void IsRegisterr(User model);
 
     }
     public class UserRepository : BaseRepository<User>, IUserRepository
@@ -35,21 +35,16 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 
         public User UserLogin(string userName, string password)
         {
-            /* User user = Get(_ => _.Email == userName && _.Password == password).ToList().FirstOrDefault();*/
+           
 
             return Get(_ => _.Email == userName && _.Password == password).ToList().FirstOrDefault();
 
-            /* if (user != null)
-                 return true;
-             else
-                 return false;*/
 
 
         }
-        public void Isfieldd(User model)
+        public void IsRegisterr(User model)
         {
-           // if (model.Email != null && model.Password != null)
-            //    return Update(model).ToList();
+           
             Insert(model);
         }
 

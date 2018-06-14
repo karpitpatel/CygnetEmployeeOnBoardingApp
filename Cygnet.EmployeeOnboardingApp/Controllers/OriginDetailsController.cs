@@ -29,27 +29,24 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
          public ActionResult Create()
         {
-            var originDetails = _originDetailsManager.GetOriginDetails((int)Session["EmpId"]);
+            var originDetails = _originDetailsManager.GetOriginDetails((int)Session["UserId"]);
             if (originDetails == null)
-                return View(new OriginDetailsViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new OriginDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(originDetails);
-            //return View();
+          
         }
 
-        // POST: OriginDetailsDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "Is_International_Worker,Country_Origin")] OriginDetailsViewModel originDetailsViewModel)
-        public ActionResult Create(OriginDetailsViewModel originDetailsViewModel)
+         public ActionResult Create(OriginDetailsViewModel originDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _originDetailsManager.IsRegister(originDetailsViewModel);
                 return RedirectToAction("Create", "WorkingHistoryDetails");
-                //return View();
+               
             }
 
             return View(originDetailsViewModel);

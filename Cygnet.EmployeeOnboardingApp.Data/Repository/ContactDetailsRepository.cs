@@ -11,7 +11,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IContactDetailsRepository : IRepository<ContactDetails>
     {
-        ContactDetails GetContactDetails(int EmpCode);
+        ContactDetails GetContactDetails(int UserId);
         ICollection<ContactDetails> GetContactDetails();
         void IsRegisterr(ContactDetails model);
         void IsUpdatee(ContactDetails model);
@@ -23,9 +23,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public ContactDetails GetContactDetails(int EmpCode)
+        public ContactDetails GetContactDetails(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<ContactDetails> GetContactDetails()
         {

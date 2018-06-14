@@ -11,7 +11,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
     public class AccomodationDetails : BaseEntity
     {
-        // public int Id { get; set; }
+       
         
         public string Rent_Ownership { get; set; }
         public string Owner_Name { get; set; }

@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IVariousCardDetailsRepository : IRepository<VariousCardDetails>
     {
-        VariousCardDetails GetVariousCardDetails(int EmpCode);
+        VariousCardDetails GetVariousCardDetails(int UserId);
         ICollection<VariousCardDetails> GetVariousCardDetails();
         void IsRegisterr(VariousCardDetails model);
         void IsUpdatee(VariousCardDetails model);
@@ -22,9 +22,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public VariousCardDetails GetVariousCardDetails(int EmpCode)
+        public VariousCardDetails GetVariousCardDetails(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<VariousCardDetails> GetVariousCardDetails()
         {

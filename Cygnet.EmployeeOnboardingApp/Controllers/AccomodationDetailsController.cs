@@ -45,9 +45,9 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         // GET: AccomodationDetails/Create
         public ActionResult Create()
         {
-            var accomodation = _accomodationDetailsManager.GetAccomodationDetails((int)Session["EmpId"]);
+            var accomodation = _accomodationDetailsManager.GetAccomodationDetails((int)Session["UserI   d"]);
             if (accomodation == null)
-                return View(new AccomodationDetailsViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new AccomodationDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(accomodation);
             //return View();

@@ -180,9 +180,7 @@
     <Compile Include="Controllers\ContactDetailsController.cs" />
     <Compile Include="Controllers\DeclarationController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
-    <Compile Include="Controllers\EducationDetailsController.cs" />
     <Compile Include="Controllers\FamilyController.cs" />
-    <Compile Include="Controllers\FamilyDetailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NomineeDetailsController.cs" />
     <Compile Include="Controllers\OriginDetailsController.cs" />
@@ -266,7 +264,9 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -334,16 +334,6 @@
     <Content Include="Views\VariousCardDetails\Details.cshtml" />
     <Content Include="Views\VariousCardDetails\Edit.cshtml" />
     <Content Include="Views\VariousCardDetails\Index.cshtml" />
-    <Content Include="Views\FamilyDetails\Create.cshtml" />
-    <Content Include="Views\FamilyDetails\Delete.cshtml" />
-    <Content Include="Views\FamilyDetails\Details.cshtml" />
-    <Content Include="Views\FamilyDetails\Edit.cshtml" />
-    <Content Include="Views\FamilyDetails\Index.cshtml" />
-    <Content Include="Views\EducationDetails\Create.cshtml" />
-    <Content Include="Views\EducationDetails\Delete.cshtml" />
-    <Content Include="Views\EducationDetails\Details.cshtml" />
-    <Content Include="Views\EducationDetails\Edit.cshtml" />
-    <Content Include="Views\EducationDetails\Index.cshtml" />
     <Content Include="Views\Family\Create.cshtml" />
     <Content Include="Views\Family\Delete.cshtml" />
     <Content Include="Views\Family\Details.cshtml" />

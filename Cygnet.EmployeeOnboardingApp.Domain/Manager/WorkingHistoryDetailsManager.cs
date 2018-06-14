@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IWorkingHistoryDetailsManager
     {
         List<WorkingHistoryDetailsViewModel> GetAllWorkingHistoryDetails();
-        WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int EmpCode);
+        WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int UserId);
         void IsRegister(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel);
-        // void GetWorkingHistoryDetails(int? id);
+       
         void IsUpdate(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel);
     }
     public class WorkingHistoryDetailsManager : BaseManager, IWorkingHistoryDetailsManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return workingHistoryDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int EmpCode)
+        public WorkingHistoryDetailsViewModel GetWorkingHistoryDetails(int UserId)
         {
-            var dataModel = _workingHistoryDetailsRepository.GetWorkingHistoryDetails(EmpCode);
+            var dataModel = _workingHistoryDetailsRepository.GetWorkingHistoryDetails(UserId);
             return workingHistoryDetailsMapping.MapToView(dataModel);
 
         }

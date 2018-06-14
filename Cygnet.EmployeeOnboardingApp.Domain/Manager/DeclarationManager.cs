@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IDeclarationManager
     {
         List<DeclarationViewModel> GetAllDeclaration();
-        DeclarationViewModel GetDeclaration(int EmpCode);
+        DeclarationViewModel GetDeclaration(int UserId);
         void IsRegister(DeclarationViewModel declarationViewModel);
-        // void GetDeclaration(int? id);
+       
         void IsUpdate(DeclarationViewModel declarationViewModel);
     }
     public class DeclarationManager : BaseManager, IDeclarationManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return declarationMapping.MapToViewList(dataModelList);
 
         }
-        public DeclarationViewModel GetDeclaration(int EmpCode)
+        public DeclarationViewModel GetDeclaration(int UserId)
         {
-            var dataModel = _declarationRepository.GetDeclaration(EmpCode);
+            var dataModel = _declarationRepository.GetDeclaration(UserId);
             return declarationMapping.MapToView(dataModel);
 
         }

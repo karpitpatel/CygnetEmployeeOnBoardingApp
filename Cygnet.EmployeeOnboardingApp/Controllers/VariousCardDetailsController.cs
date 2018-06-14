@@ -30,27 +30,24 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
      
         public ActionResult Create()
         {
-            var variousCard = _variousCardDetailsManager.GetVariousCardDetails((int)Session["EmpId"]);
+            var variousCard = _variousCardDetailsManager.GetVariousCardDetails((int)Session["UserId"]);
             if (variousCard == null)
-                return View(new VariousCardDetailsViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new VariousCardDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(variousCard);
-            //return View();
+         
         }
 
-        // POST: VariousCardDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //  public ActionResult Create([Bind(Include = "Passport_No,Passport_Validity,Esic_No,Vehicle_No,Pension_Payment_OrderNo,Scheme_Certificate_No,Aadhar_No,Election_No")] VariousCardDetailsViewModel variousCardDetailsViewModel)
-        public ActionResult Create(VariousCardDetailsViewModel variousCardDetailsViewModel)
+          public ActionResult Create(VariousCardDetailsViewModel variousCardDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _variousCardDetailsManager.IsRegister(variousCardDetailsViewModel);
                 return RedirectToAction("Index", "Family");
-                // return View();
+               
             }
 
             return View(variousCardDetailsViewModel);

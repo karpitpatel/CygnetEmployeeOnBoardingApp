@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface INomineeDetailsManager
     {
         List<NomineeDetailsViewModel> GetAllNomineeDetails();
-        NomineeDetailsViewModel GetNomineeDetails(int EmpCode);
+        NomineeDetailsViewModel GetNomineeDetails(int UserId);
         void IsRegister(NomineeDetailsViewModel nomineeDetailsViewModel);
-        // void GetNomineeDetails(int? id);
+      
         void IsUpdate(NomineeDetailsViewModel nomineeDetailsViewModel);
     }
     public class NomineeDetailsManager : BaseManager, INomineeDetailsManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return nomineeDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public NomineeDetailsViewModel GetNomineeDetails(int EmpCode)
+        public NomineeDetailsViewModel GetNomineeDetails(int UserId)
         {
-            var dataModel = _nomineeDetailsRepository.GetNomineeDetails(EmpCode);
+            var dataModel = _nomineeDetailsRepository.GetNomineeDetails(UserId);
             return nomineeDetailsMapping.MapToView(dataModel);
 
         }

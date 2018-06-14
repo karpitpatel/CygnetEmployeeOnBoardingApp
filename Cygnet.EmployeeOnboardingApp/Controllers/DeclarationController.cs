@@ -27,40 +27,36 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             _declarationManager = declarationManager;
         }
 
-        // GET: DeclarationDetails
-        //public ActionResult Index(int id)
-
+    
 
        
         public ActionResult Create()
         {
-            var declaration = _declarationManager.GetDeclaration((int)Session["EmpId"]);
+            var declaration = _declarationManager.GetDeclaration((int)Session["UserId"]);
             if (declaration == null)
-                return View(new DeclarationViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new DeclarationViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(declaration);
-            //return View();
+            
         }
 
-        // POST: DeclarationDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //  public ActionResult Create([Bind(Include = "Kyc_Details,Is_Mem_Epf_Schema,Dt_Allot_Ins_No,Dt_Issue_Tic")] DeclarationViewModel declarationViewModel)
+     
         public ActionResult Create(DeclarationViewModel declarationViewModel)
         {
             if (ModelState.IsValid)
             {
                 _declarationManager.IsRegister(declarationViewModel);
                 return RedirectToAction("Create", "NomineeDetails");
-                // return View();
+               
             }
 
             return View(declarationViewModel);
         }
 
-        // GET: DeclarationDetails/Edit/5
+       
         
 
 

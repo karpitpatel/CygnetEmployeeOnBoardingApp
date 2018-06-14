@@ -12,8 +12,8 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
 {
     public interface IEducationManager
     {
-        List<EducationViewModel> GetAllEducation(int EmpCode);
-        EducationViewModel GetEducation(int EmpCode);
+        List<EducationViewModel> GetAllEducation(int UserId);
+        EducationViewModel GetEducation(int Id);
         void IsRegister(EducationViewModel educationViewModel);
         // void GetEducation(int? id);
         void IsUpdate(EducationViewModel educationViewModel);
@@ -29,15 +29,15 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             educationMapping = new EducationMapping();
 
         }
-        public List<EducationViewModel> GetAllEducation(int EmpCode)
+        public List<EducationViewModel> GetAllEducation(int UserId)
         {
-            var dataModelList = _educationRepository.GetAllEducation(EmpCode);
+            var dataModelList = _educationRepository.GetAllEducation(UserId);
             return educationMapping.MapToViewList(dataModelList);
 
         }
-        public EducationViewModel GetEducation(int EmpCode)
+        public EducationViewModel GetEducation(int Id)
         {
-            var dataModel = _educationRepository.GetEducation(EmpCode);
+            var dataModel = _educationRepository.GetEducation(Id);
             return educationMapping.MapToView(dataModel);
 
         }

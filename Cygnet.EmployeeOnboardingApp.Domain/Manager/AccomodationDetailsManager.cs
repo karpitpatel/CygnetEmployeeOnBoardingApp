@@ -13,9 +13,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     public interface IAccomodationDetailsManager
     {
         List<AccomodationDetailsViewModel> GetAllAccomodationDetails();
-        AccomodationDetailsViewModel GetAccomodationDetails(int EmpCode);
+        AccomodationDetailsViewModel GetAccomodationDetails(int UserId);
         void IsRegister(AccomodationDetailsViewModel accomodationDetailsViewModel);
-        // void GetAccomodationDetails(int? id);
+       
         void IsUpdate(AccomodationDetailsViewModel accomodationDetailsViewModel);
     }
     public class AccomodationDetailsManager : BaseManager, IAccomodationDetailsManager
@@ -35,9 +35,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             return accomodationDetailsMapping.MapToViewList(dataModelList);
 
         }
-        public AccomodationDetailsViewModel GetAccomodationDetails(int EmpCode)
+        public AccomodationDetailsViewModel GetAccomodationDetails(int UserId)
         {
-            var dataModel = _accomodationDetailsRepository.GetAccomodationDetails(EmpCode);
+            var dataModel = _accomodationDetailsRepository.GetAccomodationDetails(UserId);
             return accomodationDetailsMapping.MapToView(dataModel);
 
         }

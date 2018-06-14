@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IBankDetailsRepository : IRepository<BankDetails>
     {
-        BankDetails GetBankDetails(int EmpCode);
+        BankDetails GetBankDetails(int UserId);
         ICollection<BankDetails> GetBankDetails();
         void IsRegisterr(BankDetails model);
       void  IsUpdatee(BankDetails model);
@@ -23,9 +23,9 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public BankDetails GetBankDetails(int EmpCode)
+        public BankDetails GetBankDetails(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).FirstOrDefault();
+            return Get(_ => _.UserId == UserId).FirstOrDefault();
         }
         public ICollection<BankDetails> GetBankDetails()
         {

@@ -18,11 +18,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Mapping
             // Table and column mapping
             ToTable("BankDetails");
 
-          /*  HasRequired(x => x.EmpCode)      // Your Xyz has an optional Address
-           .WithMany()                         // Address may be owned by many Xyz objects
-           .HasForeignKey(x => x.EmpCode);*/
-
-
+            HasKey(t => t.Id);
 
         }
 

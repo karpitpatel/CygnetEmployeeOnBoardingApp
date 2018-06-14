@@ -64,12 +64,8 @@
     <Compile Include="Manager\BaseManager.cs" />
     <Compile Include="Manager\ContactDetailsManager.cs" />
     <Compile Include="Manager\DeclarationManager.cs" />
-    <Compile Include="Manager\EducationDetailsManager.cs" />
     <Compile Include="Manager\EducationManager.cs" />
-    <Compile Include="Manager\EducationRelationManager.cs" />
-    <Compile Include="Manager\FamilyDetailsManager.cs" />
     <Compile Include="Manager\FamilyManager.cs" />
-    <Compile Include="Manager\FamilyRelationManager.cs" />
     <Compile Include="Manager\NomineeDetailsManger.cs" />
     <Compile Include="Manager\OriginDetailsManager.cs" />
     <Compile Include="Manager\PersonalDetailsManager.cs" />
@@ -84,12 +80,8 @@
     <Compile Include="ViewMapping\BaseMapper.cs" />
     <Compile Include="ViewMapping\ContactDetailsMapping.cs" />
     <Compile Include="ViewMapping\DeclarationMapping.cs" />
-    <Compile Include="ViewMapping\EducationDetailsMapping.cs" />
     <Compile Include="ViewMapping\EducationMapping.cs" />
-    <Compile Include="ViewMapping\EducationRelationMapping.cs" />
-    <Compile Include="ViewMapping\FamilyDetailsMapping.cs" />
     <Compile Include="ViewMapping\FamilyMapping.cs" />
-    <Compile Include="ViewMapping\FamilyRelationMapping.cs" />
     <Compile Include="ViewMapping\NomineeDetailsMapping.cs" />
     <Compile Include="ViewMapping\OriginDetailsMapping.cs" />
     <Compile Include="ViewMapping\PersonalDetailsMapping.cs" />
@@ -103,11 +95,7 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ContactDetailsViewModel.cs" />
     <Compile Include="ViewModel\DeclarationViewModel.cs" />
-    <Compile Include="ViewModel\EducationDetailsViewModel.cs" />
-    <Compile Include="ViewModel\EducationRelationViewModel.cs" />
     <Compile Include="ViewModel\EducationViewModel.cs" />
-    <Compile Include="ViewModel\FamilyDetailsViewModel.cs" />
-    <Compile Include="ViewModel\FamilyRelationViewModel.cs" />
     <Compile Include="ViewModel\FamilyViewModel.cs" />
     <Compile Include="ViewModel\NomineeDetailsViewModel.cs" />
     <Compile Include="ViewModel\OriginDetailsViewModel.cs" />

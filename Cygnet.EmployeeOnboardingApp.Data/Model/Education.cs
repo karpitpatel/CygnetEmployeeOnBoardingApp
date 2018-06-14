@@ -10,7 +10,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
     public class Education : BaseEntity
     {
-       // public int EduId { get; set; }
+       
         public string School_College { get; set; }
         public string Board_University { get; set; }
         public string Degree { get; set; }
@@ -19,7 +19,6 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
-        //[ForeignKey("EduId")]
-        //public EducationRelation EducationRelation { get; set; }
+     
     }
 }

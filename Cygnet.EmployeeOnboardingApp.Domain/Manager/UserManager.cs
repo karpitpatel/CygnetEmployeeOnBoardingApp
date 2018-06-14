@@ -16,7 +16,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
         List<UserViewModel> GetAllUsers();
         UserViewModel GetUser(string username);
         UserViewModel UserLogin(string username, string password);
-        void Isfield(UserViewModel user);
+        void IsRegister(UserViewModel user);
     }
     public class UserManager : BaseManager, IUserManager
     {
@@ -46,9 +46,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             var data = _userRepository.UserLogin(username, password);
             return userMapping.MapToView(data);
         }
-        public void Isfield(UserViewModel userViewModel)
+        public void IsRegister(UserViewModel userViewModel)
         {
-            _userRepository.Isfieldd(userMapping.MapToModel(userViewModel));
+            _userRepository.IsRegisterr(userMapping.MapToModel(userViewModel));
             _userRepository.UnitOfWork.Save();
 
         }

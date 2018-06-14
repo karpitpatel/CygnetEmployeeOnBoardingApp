@@ -15,7 +15,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
         List<BankDetailsViewModel> GetAllBankDetails();
         BankDetailsViewModel GetBankDetails(int EmpCode);
         void IsRegister(BankDetailsViewModel bankDetailsViewModel);
-        // void GetBankDetails(int? id);
+        
         void IsUpdate(BankDetailsViewModel bankDetailsViewModel);
     }
     public class BankDetailsManager : BaseManager, IBankDetailsManager

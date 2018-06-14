@@ -34,9 +34,9 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         
         public ActionResult Create()
         {
-            var bank = _bankDetailsManager.GetBankDetails((int)Session["EmpId"]);
+            var bank = _bankDetailsManager.GetBankDetails((int)Session["UserId"]);
             if (bank == null)
-                return View(new BankDetailsViewModel(){ UserId = (int)Session["EmpId"]});
+                return View(new BankDetailsViewModel(){ UserId = (int)Session["UserId"]});
             else
                 return View(bank);
             //return View();

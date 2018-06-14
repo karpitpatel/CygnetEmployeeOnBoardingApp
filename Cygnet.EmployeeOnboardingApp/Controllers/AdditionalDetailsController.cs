@@ -32,27 +32,25 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
           public ActionResult Create()
         {
-            var additional = _additionalDetailsManager.GetAdditionalDetails((int)Session["EmpId"]);
+            var additional = _additionalDetailsManager.GetAdditionalDetails((int)Session["UserId"]);
             if (additional == null)
-                return View(new AdditionalDetailsViewModel() { UserId = (int)Session["EmpId"] });
+                return View(new AdditionalDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(additional);
-            //return View();
+           
         }
 
-        // POST: AdditionalDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "Rel_With_Present_Emp,Name_Emp,Relationship,Details_If_Worked_Before")] AdditionalDetailsViewModel additionalDetailsViewModel)
+       
         public ActionResult Create( AdditionalDetailsViewModel additionalDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _additionalDetailsManager.IsRegister(additionalDetailsViewModel);
                 return RedirectToAction("Create", "Declaration");
-                //return View();
+              
             }
 
             return View(additionalDetailsViewModel);

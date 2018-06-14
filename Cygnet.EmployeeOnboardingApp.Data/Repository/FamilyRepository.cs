@@ -10,8 +10,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
 {
     public interface IFamilyRepository : IRepository<Family>
     {
-        Family GetFamily(int EmpCode);
-        ICollection<Family> GetAllFamily(int EmpCode);
+        Family GetFamily(int Id);
+        ICollection<Family> GetAllFamily(int UserId);
         ICollection<Family> GetFamily();
         void IsRegisterr(Family model);
         void IsUpdatee(Family model);
@@ -24,14 +24,14 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Repository
         {
 
         }
-        public Family GetFamily(int EmpCode)
+        public Family GetFamily(int Id)
         {
-            return Get(_ => _.Id == EmpCode).FirstOrDefault();
+            return Get(_ => _.Id == Id).FirstOrDefault();
         }
 
-        public ICollection<Family> GetAllFamily(int EmpCode)
+        public ICollection<Family> GetAllFamily(int UserId)
         {
-            return Get(_ => _.UserId == EmpCode).ToList();
+            return Get(_ => _.UserId == UserId).ToList();
         }
 
         public ICollection<Family> GetFamily()

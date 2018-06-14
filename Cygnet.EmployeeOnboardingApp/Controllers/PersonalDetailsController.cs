@@ -32,27 +32,24 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
        
         public ActionResult Create()
         {
-            var personal = _personalDetailsManager.GetPersonalDetails((int)Session["EmpId"]);
+            var personal = _personalDetailsManager.GetPersonalDetails((int)Session["UserId"]);
             if (personal == null)
-                return View(new PersonalDetailsViewModel() { UserId = (int)Session["EmpId"]});
+                return View(new PersonalDetailsViewModel() { UserId = (int)Session["UserId"]});
             else
                 return View(personal);
-            //return View();
+           
         }
 
-        // POST: PersonalDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "Name,Father_Name,Sex,Marital_Stat,Date_Anniv,Dob,Name_Company,Designation,Department,Blood_Grp,Allergy,Ailment")] PersonalDetailsViewModel personalDetailsViewModel)
-        public ActionResult Create(PersonalDetailsViewModel personalDetailsViewModel)
+             public ActionResult Create(PersonalDetailsViewModel personalDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _personalDetailsManager.IsRegister(personalDetailsViewModel);
               return RedirectToAction("Create", "ContactDetails");
-              //return View();
+           
             }
 
             return View(personalDetailsViewModel);

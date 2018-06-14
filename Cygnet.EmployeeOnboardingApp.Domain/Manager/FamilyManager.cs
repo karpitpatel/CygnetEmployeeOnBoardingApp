@@ -12,10 +12,9 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
 {
     public interface IFamilyManager
     {
-        List<FamilyViewModel> GetAllFamily(int EmpCode);
-        FamilyViewModel GetFamily(int EmpCode);
+        List<FamilyViewModel> GetAllFamily(int UserId);
+        FamilyViewModel GetFamily(int Id);
         void IsRegister(FamilyViewModel familyViewModel);
-        // void GetFamily(int? id);
         void IsUpdate(FamilyViewModel familyViewModel);
     }
     public class FamilyManager : BaseManager, IFamilyManager
@@ -29,15 +28,15 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
             familyMapping = new FamilyMapping();
 
         }
-        public List<FamilyViewModel> GetAllFamily(int EmpCode)
+        public List<FamilyViewModel> GetAllFamily(int UserId)
         {
-            var dataModelList = _familyRepository.GetAllFamily(EmpCode);
+            var dataModelList = _familyRepository.GetAllFamily(UserId);
             return familyMapping.MapToViewList(dataModelList);
 
         }
-        public FamilyViewModel GetFamily(int EmpCode)
+        public FamilyViewModel GetFamily(int Id)
         {
-            var dataModel = _familyRepository.GetFamily(EmpCode);
+            var dataModel = _familyRepository.GetFamily(Id);
             return familyMapping.MapToView(dataModel);
 
         }

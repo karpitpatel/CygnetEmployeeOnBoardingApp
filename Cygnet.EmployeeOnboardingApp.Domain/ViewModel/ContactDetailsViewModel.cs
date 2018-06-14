@@ -16,25 +16,30 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public int UserId { get; set; }
         [Required]
         [DisplayName("Personal Email ID")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [Required]
+        [DataType(DataType.PhoneNumber)]
         [DisplayName("Home Contact Number")]
-        public int HomeNo { get; set; }
+        public string HomeNo { get; set; }
         [Required]
+        [DataType(DataType.PhoneNumber)]
         [DisplayName("Mobile Number")]
-        public int MobNo { get; set; }
+        public string MobNo { get; set; }
         [Required]
         [DisplayName("Temporary Address")]
         public string TempAddr { get; set; }
         [Required]
         [DisplayName("Pincode")]
-        public int Pincode_tempaddr { get; set; }
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
+        public string Pincode_tempaddr { get; set; }
         [Required]
         [DisplayName("Pemanent Address")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         public string PermAddr { get; set; }
        
         [Required]
         [DisplayName("Pincode")]
-        public int Pincode_permadrr { get; set; }
+        public string Pincode_permadrr { get; set; }
     }
 }
