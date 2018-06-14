@@ -9,7 +9,6 @@ using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
 
 namespace Cygnet.EmployeeOnboardingApp.Domain.ViewMapping
 {
-
     public class AdditionalDetailsMapping : BaseMapper<AdditionalDetailsViewModel, AdditionalDetails>
     {
         public AdditionalDetailsMapping()
@@ -22,7 +21,5 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewMapping
             });
             Mapper = config.CreateMapper();
         }
-
     }
 }
-

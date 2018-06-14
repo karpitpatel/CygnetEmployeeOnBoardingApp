@@ -1,33 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Cygnet.EmployeeOnboardingApp.Data.Context;
-using Cygnet.EmployeeOnboardingApp.Data.Model;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+﻿using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Repository;
-using Cygnet.EmployeeOnboardingApp.Data.Repository;
-using Cygnet.EmployeeOnboardingApp.Domain.Manager;
+using System.Web.Mvc;
 
 namespace Cygnet.EmployeeOnboardingApp.Controllers
 {
     public class OriginDetailsController : Controller
     {
-
         private readonly IOriginDetailsManager _originDetailsManager;
-        
+
         public OriginDetailsController(IOriginDetailsManager originDetailsManager)
         {
             _originDetailsManager = originDetailsManager;
         }
 
-         public ActionResult Create()
+        public ActionResult Create()
         {
             var originDetails = _originDetailsManager.GetOriginDetails((int)Session["UserId"]);
             if (originDetails == null)
@@ -51,9 +37,5 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
             return View(originDetailsViewModel);
         }
-
-        
-
-
     }
 }

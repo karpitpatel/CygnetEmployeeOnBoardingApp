@@ -1,8 +1,6 @@
 ﻿@*@model Cygnet.EmployeeOnboardingApp.Domain.ViewModel.FamilyViewModel*@
 @model Cygnet.EmployeeOnboardingApp.Domain.ViewModel.FamilyViewModel
 
-
-
 @{
     ViewBag.Title = "FamilyDetails";
 }
@@ -24,7 +22,7 @@
             <h4>Family</h4>
             @Html.HiddenFor(model => model.UserId)
             <hr />
-          
+
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -91,9 +89,6 @@
                     @Html.ValidationMessageFor(model => model.Residing_tog, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-         
-
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">

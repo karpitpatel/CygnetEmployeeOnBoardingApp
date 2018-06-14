@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
+using System.Data.Entity;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Context
 {
@@ -27,7 +22,5 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
         
         IDbSet<Education> Education{ get; set; }
         IDbSet<Family> Family { get; set; }
-
-
     }
 }

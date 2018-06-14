@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace Cygnet.EmployeeOnboardingApp.Core.Data.Model
 {
@@ -35,4 +30,3 @@ namespace Cygnet.EmployeeOnboardingApp.Core.Data.Model
         EntityState GetEntityState();
     }
 }
-

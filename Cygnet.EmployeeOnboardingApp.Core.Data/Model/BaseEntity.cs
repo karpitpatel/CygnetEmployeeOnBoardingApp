@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cygnet.EmployeeOnboardingApp.Core.Data.Model
 {
@@ -22,6 +18,7 @@ namespace Cygnet.EmployeeOnboardingApp.Core.Data.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
@@ -59,4 +56,3 @@ namespace Cygnet.EmployeeOnboardingApp.Core.Data.Model
         }
     }
 }
-

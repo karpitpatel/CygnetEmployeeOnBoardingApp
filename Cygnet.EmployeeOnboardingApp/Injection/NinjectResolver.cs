@@ -4,8 +4,6 @@ using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 using Ninject;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Cygnet.EmployeeOnboardingApp.Injection
 {
@@ -18,14 +16,17 @@ namespace Cygnet.EmployeeOnboardingApp.Injection
             _kernel = new StandardKernel();
             AddBindings();
         }
+
         public object GetService(Type serviceType)
         {
             return _kernel.TryGet(serviceType);
         }
+
         public IEnumerable<object> GetServices(Type serviceType)
         {
             return _kernel.GetAll(serviceType);
         }
+
         private void AddBindings()
         {
             _kernel.Bind<IEmployeeOnBoardingEntities>().To<EmployeeOnBoardingEntities>();
@@ -45,10 +46,6 @@ namespace Cygnet.EmployeeOnboardingApp.Injection
             _kernel.Bind<IFamilyManager>().To<FamilyManager>();
             _kernel.Bind<IEducationManager>().To<EducationManager>();
 
-
-
-
-
             _kernel.Bind<ITestUOWRepository>().To<TestUOWRepository>();
             _kernel.Bind<IUserRepository>().To<UserRepository>();
             _kernel.Bind<IPersonalDetailsRepository>().To<PersonalDetailsRepository>();
@@ -63,9 +60,6 @@ namespace Cygnet.EmployeeOnboardingApp.Injection
             _kernel.Bind<INomineeDetailsRepository>().To<NomineeDetailsRepository>();
             _kernel.Bind<IFamilyRepository>().To<FamilyRepository>();
             _kernel.Bind<IEducationRepository>().To<EducationRepository>();
-
-
-
         }
     }
 }

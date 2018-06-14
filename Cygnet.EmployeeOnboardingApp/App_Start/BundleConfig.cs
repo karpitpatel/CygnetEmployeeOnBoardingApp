@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace Cygnet.EmployeeOnboardingApp
 {
@@ -26,10 +25,9 @@ namespace Cygnet.EmployeeOnboardingApp
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
           "~/Scripts/jquery-ui-{version}.js"));
-            //css  
+            //css
             bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
                    "~/Content/jquery-ui.css"));
         }

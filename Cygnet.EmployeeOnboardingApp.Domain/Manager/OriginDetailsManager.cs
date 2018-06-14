@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Cygnet.EmployeeOnboardingApp.Data.Repository;
+﻿using Cygnet.EmployeeOnboardingApp.Data.Repository;
 using Cygnet.EmployeeOnboardingApp.Domain.ViewMapping;
 using Cygnet.EmployeeOnboardingApp.Domain.ViewModel;
+using System.Collections.Generic;
 
 namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
 {
@@ -14,10 +9,13 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
     {
         List<OriginDetailsViewModel> GetAllOriginDetails();
         OriginDetailsViewModel GetOriginDetails(int UserId);
+
         void IsRegister(OriginDetailsViewModel originDetailsViewModel);
+
         // void GetOriginDetails(int? id);
         void IsUpdate(OriginDetailsViewModel originDetailsViewModel);
     }
+
     public class OriginDetailsManager : BaseManager, IOriginDetailsManager
     {
         private readonly IOriginDetailsRepository _originDetailsRepository;
@@ -27,32 +25,30 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.Manager
         {
             _originDetailsRepository = originDetailsRepository;
             originDetailsMapping = new OriginDetailsMapping();
-
         }
+
         public List<OriginDetailsViewModel> GetAllOriginDetails()
         {
             var dataModelList = _originDetailsRepository.GetOriginDetails();
             return originDetailsMapping.MapToViewList(dataModelList);
-
         }
+
         public OriginDetailsViewModel GetOriginDetails(int UserId)
         {
             var dataModel = _originDetailsRepository.GetOriginDetails(UserId);
             return originDetailsMapping.MapToView(dataModel);
-
         }
+
         public void IsRegister(OriginDetailsViewModel originDetailsViewModel)
         {
             _originDetailsRepository.IsRegisterr(originDetailsMapping.MapToModel(originDetailsViewModel));
             _originDetailsRepository.UnitOfWork.Save();
-
         }
+
         public void IsUpdate(OriginDetailsViewModel originDetailsViewModel)
         {
             _originDetailsRepository.IsUpdatee(originDetailsMapping.MapToModel(originDetailsViewModel));
             _originDetailsRepository.UnitOfWork.Save();
-
         }
     }
 }
-

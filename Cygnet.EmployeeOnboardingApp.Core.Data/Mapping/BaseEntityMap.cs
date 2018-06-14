@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 
 namespace Cygnet.EmployeeOnboardingApp.Core.Data.Mapping
 {
@@ -31,4 +24,3 @@ namespace Cygnet.EmployeeOnboardingApp.Core.Data.Mapping
         }
     }
 }
-

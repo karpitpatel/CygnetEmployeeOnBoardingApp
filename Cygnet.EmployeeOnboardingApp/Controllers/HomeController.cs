@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 using System.Web.Mvc;
-using Cygnet.EmployeeOnboardingApp.Domain.Manager;
 
 namespace Cygnet.EmployeeOnboardingApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ITestUOWManager _testUOWManager;
+
         public HomeController(ITestUOWManager testUOWManager)
         {
             _testUOWManager = testUOWManager;

@@ -1,13 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Context;
 using Cygnet.EmployeeOnboardingApp.Data.Mapping;
 using Cygnet.EmployeeOnboardingApp.Data.Model;
+using System.Data.Entity;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Context
 {
@@ -15,12 +9,11 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
     {
         public EmployeeOnBoardingEntities()
         {
-
         }
+
         public EmployeeOnBoardingEntities(string connectionString)
             : base(connectionString)
         {
-
         }
 
         public IDbSet<TestUOW> TestUOW { get; set; }
@@ -39,8 +32,6 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
      
         public IDbSet<Family> Family { get; set; }
         public IDbSet<Education> Education { get; set; }
-
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -62,9 +53,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
             modelBuilder.Configurations.Add(new FamilyMapping());
            
             modelBuilder.Configurations.Add(new EducationMapping());
-
-
         }
+
         /// <summary>
         /// Releases unmanaged and - optionally - managed resources.
         /// </summary>
@@ -77,4 +67,3 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Context
    
     }
 }
-

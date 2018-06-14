@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
     public class BankDetails : BaseEntity
     {
-
-        
         public string Acc_No { get; set; }
         public string Ifsc_Code { get; set; }
         public string Pan_No { get; set; }
@@ -23,8 +15,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public string Fam_PensionScheme { get; set; }
         public string Pf_No { get; set; }
         public int UserId { get; set; }
+
         [ForeignKey("UserId")]
         public User User { get; set; }
-
     }
 }

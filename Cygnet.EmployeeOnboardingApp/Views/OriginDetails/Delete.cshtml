@@ -20,48 +20,47 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Is_International_Worker)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Is_International_Worker)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Country_Origin)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Country_Origin)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Created)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Created)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Modified)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Modified)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.RowVersion)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.RowVersion)
             </dd>
-    
         </dl>
-    
+
         @using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
                 @Html.ActionLink("Back to List", "Index")

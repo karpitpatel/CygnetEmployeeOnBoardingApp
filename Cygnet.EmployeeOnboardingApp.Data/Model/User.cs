@@ -1,10 +1,5 @@
-﻿using System;
+﻿using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cygnet.EmployeeOnboardingApp.Core.Data.Model;
 
 namespace Cygnet.EmployeeOnboardingApp.Data.Model
 {
@@ -13,9 +8,8 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
 
         public string Name { get; set; }
 
-      
         public string Email { get; set; }
-   
+
         public string Password { get; set; }
 
         public ICollection<PersonalDetails> PersonalDetails { get; set; }
@@ -31,10 +25,5 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Model
         public ICollection<OriginDetails> OriginDetails { get; set; }
         public ICollection<VariousCardDetails> VariousCardDetails { get; set; }
         public ICollection<WorkingHistoryDetails> WorkingHistoryDetails { get; set; }
-
-
-
-
-
     }
 }
