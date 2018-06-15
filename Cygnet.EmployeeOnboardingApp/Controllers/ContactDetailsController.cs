@@ -20,19 +20,19 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
                 return View(new ContactDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(contact);
-           
+
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-         public ActionResult Create(ContactDetailsViewModel contactDetailsViewModel)
+        public ActionResult Create(ContactDetailsViewModel contactDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _contactDetailsManager.IsRegister(contactDetailsViewModel);
                 return RedirectToAction("Create", "BankDetails");
-         
+
             }
 
             return View(contactDetailsViewModel);

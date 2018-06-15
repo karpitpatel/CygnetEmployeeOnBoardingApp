@@ -20,22 +20,20 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
                 return View(new NomineeDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(nomineeDetails);
-            //return View();
+
         }
 
-        // POST: NomineeDetailsDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        // public ActionResult Create([Bind(Include = "Name,Relationship,Address")] NomineeDetailsViewModel nomineeDetailsViewModel)
+
         public ActionResult Create(NomineeDetailsViewModel nomineeDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _nomineeDetailsManager.IsRegister(nomineeDetailsViewModel);
                 return RedirectToAction("Create", "OriginDetails");
-                //  return View();
+
             }
 
             return View(nomineeDetailsViewModel);

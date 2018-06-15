@@ -20,6 +20,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
 
         [Required]
         [DisplayName("PAN Card Number")]
+        [RegularExpression(@"[A-Z]{5}\d{4}[A-Z]{1}$", ErrorMessage = "Not a valid pancard number")]
         public string Pan_No { get; set; }
 
         [DisplayName("UAN Number")]

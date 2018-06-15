@@ -26,15 +26,16 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Marital_Stat { get; set; }
 
         [DisplayName("Date Of Anniversary")]
+       
         public string Date_Anniv { get; set; }
 
 
         [Required]
         [Display(Name = "Date of Birth")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public Nullable<System.DateTime> Dob{ get; set; }
-
-
+        [DataType(DataType.Date)]
+        //   [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime Dob{ get; set; }
 
         [Required]
         [DisplayName("Name Of the Company")]

@@ -44,8 +44,7 @@
                      new SelectListItem{Text="Spouse",Value="Spouse"},
                      new SelectListItem{Text="Children",Value="Children"}
                },"Select Relationship", new { htmlAttributes = new {@class="dropdown-menu"}})
-                    @*//@Html.EditorFor(model => model.Relation, new { htmlAttributes = new { @class = "form-control" } })*@
-                    @*@Html.DropDownList("Relation", Model.Relations)*@
+                
                     @Html.ValidationMessageFor(model => model.Relation, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -85,7 +84,11 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Residing_tog, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Residing_tog, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DropDownList("Residing_tog", new List<SelectListItem>
+                  {
+                      new SelectListItem{Text="Yes",Value="Yes"},
+                       new SelectListItem{Text="No",Value="No"}
+                  },"Select", new { htmlAttributes = new {@class="dropdown-menu"}})
                     @Html.ValidationMessageFor(model => model.Residing_tog, "", new { @class = "text-danger" })
                 </div>
             </div>

@@ -27,17 +27,17 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             if (ModelState.IsValid)
             {
                 var data = _userManager.UserLogin(model.Email, model.Password);
-                
+
                 if (data != null)
                 {
                     Session["UserId"] = data.Id;
                     return View("WelcomePage");
                 }
                 else
-                      return View();
-                 
+                    return View();
+
             }
-         
+
             return View();
         }
 
@@ -49,23 +49,23 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-    
+
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+
         public ActionResult Create(UserViewModel userViewModel)
         {
-         
+
             if (ModelState.IsValid)
             {
                 _userManager.IsRegister(userViewModel);
                 return RedirectToAction("Login");
             }
 
-            
+
             return View();
         }
 
@@ -76,5 +76,11 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
             return View();
         }
+        //public ActionResult Logout()
+        //{
+        //    Session["UserId"] = null;
+        //    return RedirectToAction("Login");
+
+        //}
     }
 }

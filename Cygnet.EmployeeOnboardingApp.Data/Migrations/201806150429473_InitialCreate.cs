@@ -208,7 +208,7 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
                         Father_Name = c.String(),
                         Sex = c.String(),
                         Marital_Stat = c.String(),
-                        Date_Anniv = c.String(),
+                        Date_Anniv = c.DateTime(nullable: false),
                         Dob = c.DateTime(nullable: false),
                         Name_Company = c.String(),
                         Designation = c.String(),

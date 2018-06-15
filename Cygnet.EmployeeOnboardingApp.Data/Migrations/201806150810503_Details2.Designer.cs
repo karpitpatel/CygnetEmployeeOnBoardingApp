@@ -7,13 +7,13 @@ namespace Cygnet.EmployeeOnboardingApp.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class Details2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Details2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806140932599_InitialCreate"; }
+            get { return "201806150810503_Details2"; }
         }
         
         string IMigrationMetadata.Source

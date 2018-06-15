@@ -20,20 +20,20 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
                 return View(new WorkingHistoryDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(workingHistoryDetails);
-    
+
         }
 
-     
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-      
+
         public ActionResult Create(WorkingHistoryDetailsViewModel workingHistoryDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _workingHistoryDetailsManager.IsRegister(workingHistoryDetailsViewModel);
                 return RedirectToAction("Create", "VariousCardDetails");
-               
+
             }
 
             return View(workingHistoryDetailsViewModel);

@@ -21,6 +21,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> Dob { get; set; }
         [DisplayName("Aadhar Number")]
+        [StringLength(16, ErrorMessage = "Invalid Aadhar Number", MinimumLength = 16)]
         public string Aadhar_No { get; set; }
         [DisplayName("Do you reside together? ")]
         public string Residing_tog { get; set; }

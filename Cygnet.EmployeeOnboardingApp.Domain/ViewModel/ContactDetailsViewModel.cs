@@ -29,6 +29,13 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string MobNo { get; set; }
 
+
+       
+        [DisplayName("Alternate Number")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
+        public string AlternateNo { get; set; }
+
         [Required]
         [DisplayName("Temporary Address")]
         public string TempAddr { get; set; }

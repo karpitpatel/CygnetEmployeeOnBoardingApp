@@ -18,43 +18,41 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
         public ActionResult Index()
         {
-             var family = _familyManager.GetAllFamily((int)Session["UserId"]);
-          
+            var family = _familyManager.GetAllFamily((int)Session["UserId"]);
+
             if (family == null)
                 return View(new List<FamilyViewModel>());
             else
-                
+
                 return View(family.ToList());
-          
+
         }
 
         public ActionResult Create()
         {
             var family = _familyManager.GetFamily((int)Session["UserId"]);
-            //if (family == null)
-              return View(new FamilyViewModel() { UserId = (int)Session["UserId"] });
-            //else
-            //    return View(family);
-            //return View();
+
+            return View(new FamilyViewModel() { UserId = (int)Session["UserId"] });
+
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-         public ActionResult Create(FamilyViewModel familyViewModel)
+        public ActionResult Create(FamilyViewModel familyViewModel)
         {
             if (ModelState.IsValid)
             {
                 _familyManager.IsRegister(familyViewModel);
                 return RedirectToAction("Index", "Family");
-              //  return View("Index");
+
             }
 
             return View(familyViewModel);
         }
         //public ActionResult Edit(int Id)
         //{
-           
+
         //    var family = _familyManager.GetFamily(Id);
         //    if (family == null)
         //        return View("Index");
@@ -68,10 +66,10 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         //{
         //    _familyManager.IsUpdate(familyViewModel);
 
-        
-            
+
+
         //        return RedirectToAction("Index","Family");
-           
+
         //}
     }
 }

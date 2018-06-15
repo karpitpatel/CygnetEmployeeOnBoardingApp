@@ -18,23 +18,23 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         public ActionResult Index()
         {
             var education = _educationManager.GetAllEducation((int)Session["UserId"]);
-          
+
             if (education == null)
                 return View(new List<EducationViewModel>());
             else
-               
+
                 return View(education.ToList());
         }
 
         public ActionResult Create()
         {
             var education = _educationManager.GetEducation((int)Session["UserId"]);
-          
+
             return View(new EducationViewModel() { UserId = (int)Session["UserId"] });
-       
+
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(EducationViewModel educationViewModel)
@@ -43,7 +43,7 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
             {
                 _educationManager.IsRegister(educationViewModel);
                 return RedirectToAction("Index", "Education");
-                // return View();
+              
             }
 
             return View(educationViewModel);

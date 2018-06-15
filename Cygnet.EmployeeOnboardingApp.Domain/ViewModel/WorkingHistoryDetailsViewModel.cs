@@ -28,7 +28,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Department { get; set; }
 
         [Required]
-        [DisplayName("Designation")]
+        [DisplayName("Designation Of The Person Reporting To")]
         public string Designation_Person_ReportingTo { get; set; }
 
         [Required]

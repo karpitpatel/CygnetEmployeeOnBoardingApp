@@ -20,20 +20,20 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
                 return View(new AdditionalDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(additional);
-           
+
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-       
+
         public ActionResult Create(AdditionalDetailsViewModel additionalDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _additionalDetailsManager.IsRegister(additionalDetailsViewModel);
                 return RedirectToAction("Create", "Declaration");
-              
+
             }
 
             return View(additionalDetailsViewModel);

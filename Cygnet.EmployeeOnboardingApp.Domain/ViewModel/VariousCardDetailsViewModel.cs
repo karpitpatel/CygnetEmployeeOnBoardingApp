@@ -31,10 +31,13 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public string Scheme_Certificate_No { get; set; }
 
         [Required]
+      
         [DisplayName("Aadhar Card Number")]
+        [StringLength(16, ErrorMessage = "Invalid Aadhar Number", MinimumLength = 16)]
         public string Aadhar_No { get; set; }
 
         [DisplayName("Election Number")]
+        [StringLength(10, ErrorMessage = "Invalid Election Number", MinimumLength = 10)]
         public string Election_No { get; set; }
     }
 }

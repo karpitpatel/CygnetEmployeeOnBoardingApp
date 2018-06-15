@@ -29,7 +29,7 @@ namespace Cygnet.EmployeeOnboardingApp
           "~/Scripts/jquery-ui-{version}.js"));
             //css
             bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
-                   "~/Content/jquery-ui.css"));
+                   "~/Content/themes/base/jquery-ui.css"));
         }
     }
 }

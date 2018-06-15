@@ -66,9 +66,17 @@
     <Compile Include="Mapping\TestUOWMapping.cs" />
     <Compile Include="Mapping\VariousCardDetailsMapping.cs" />
     <Compile Include="Mapping\WorkingHistoryDetailsMapping.cs" />
-    <Compile Include="Migrations\201806140932599_InitialCreate.cs" />
-    <Compile Include="Migrations\201806140932599_InitialCreate.Designer.cs">
-      <DependentUpon>201806140932599_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201806150429473_InitialCreate.cs" />
+    <Compile Include="Migrations\201806150429473_InitialCreate.Designer.cs">
+      <DependentUpon>201806150429473_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806150438572_Details1.cs" />
+    <Compile Include="Migrations\201806150438572_Details1.Designer.cs">
+      <DependentUpon>201806150438572_Details1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806150810503_Details2.cs" />
+    <Compile Include="Migrations\201806150810503_Details2.Designer.cs">
+      <DependentUpon>201806150810503_Details2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AccomodationDetails.cs" />
@@ -121,8 +129,14 @@
     <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806140932599_InitialCreate.resx">
-      <DependentUpon>201806140932599_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806150429473_InitialCreate.resx">
+      <DependentUpon>201806150429473_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150438572_Details1.resx">
+      <DependentUpon>201806150438572_Details1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806150810503_Details2.resx">
+      <DependentUpon>201806150810503_Details2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

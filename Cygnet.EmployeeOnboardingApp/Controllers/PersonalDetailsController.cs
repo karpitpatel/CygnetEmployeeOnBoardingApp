@@ -17,22 +17,22 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
         {
             var personal = _personalDetailsManager.GetPersonalDetails((int)Session["UserId"]);
             if (personal == null)
-                return View(new PersonalDetailsViewModel() { UserId = (int)Session["UserId"]});
+                return View(new PersonalDetailsViewModel() { UserId = (int)Session["UserId"] });
             else
                 return View(personal);
-           
+
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-             public ActionResult Create(PersonalDetailsViewModel personalDetailsViewModel)
+        public ActionResult Create(PersonalDetailsViewModel personalDetailsViewModel)
         {
             if (ModelState.IsValid)
             {
                 _personalDetailsManager.IsRegister(personalDetailsViewModel);
-              return RedirectToAction("Create", "ContactDetails");
-           
+                return RedirectToAction("Create", "ContactDetails");
+
             }
 
             return View(personalDetailsViewModel);

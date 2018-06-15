@@ -11,7 +11,7 @@ namespace Cygnet.EmployeeOnboardingApp.Domain.ViewModel
         public int UserId { get; set; }
 
         [Required]
-        [DisplayName("Rent or Ownershipe Home?")]
+        [DisplayName("Rent or Ownership Home?")]
         public string Rent_Ownership { get; set; }
 
         [DisplayName("If on rent, Owner's Name")]

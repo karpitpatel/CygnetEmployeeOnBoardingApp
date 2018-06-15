@@ -3,24 +3,18 @@
 @{
     ViewBag.Title = "LoginPage";
 }
+<meta name="viewport" content="width=device-width" />
 
-@*<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
-</head>
-<body>*@
-
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
     <div style="text-align:center;margin-top:10%;">
 
         @Html.LabelFor(model => model.Email, "Email")
         @Html.TextBoxFor(model => model.Email)
         <br />
+
         @Html.LabelFor(model => model.Password, "Password")
         <!-- @Html.TextBoxFor(model => model.Password)-->
         @Html.Password("Password", "", new { id = "Password", Textmode = "Password" })
@@ -35,7 +29,5 @@
         </div>
     </div>
 }
-    @Html.ActionLink("Create New Account", "Create")
+@Html.ActionLink("Create New Account", "Create")
 
-@*</body>
-</html>*@

@@ -14,6 +14,7 @@ namespace Cygnet.EmployeeOnboardingApp.Controllers
 
         public ActionResult Index()
         {
+           Session["UserId"] = null;
             return RedirectToAction("Login", "Account");
         }
 

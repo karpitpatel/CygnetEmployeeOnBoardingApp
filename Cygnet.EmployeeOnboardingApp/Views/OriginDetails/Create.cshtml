@@ -24,7 +24,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Is_International_Worker, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Is_International_Worker, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Is_International_Worker", new List<SelectListItem>
+              {
+                  new SelectListItem{Text="Yes",Value="Yes"},
+                   new SelectListItem{Text="No",Value="No"}
+              },"Select", new { htmlAttributes = new {@class="dropdown-menu"}})
                 @Html.ValidationMessageFor(model => model.Is_International_Worker, "", new { @class = "text-danger" })
             </div>
         </div>

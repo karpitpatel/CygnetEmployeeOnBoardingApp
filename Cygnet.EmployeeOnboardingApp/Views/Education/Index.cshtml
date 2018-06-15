@@ -3,19 +3,11 @@
 @{
     ViewBag.Title = "EducationDetails";
 }
+<meta name="viewport" content="width=device-width" />
 
-@*<!DOCTYPE html>
 
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Index</title>
-    </head>
-    <body>*@
-@*@Html.HiddenFor(model => model.UserId)*@
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br/>
+<br/>
 <table class="table">
     <tr>
 
@@ -65,6 +57,10 @@
         <input type="button" value="Save and Continue" class="btn btn-default" onclick="location.href='@Url.Action("ThankYouPage","Account")'" />
     </div>
 </div>
+<p>
+   
+    @Html.ActionLink("Create New", "Create")
+    <br />
+    <br />
+</p>
 
-@*</body>
-    </html>*@
